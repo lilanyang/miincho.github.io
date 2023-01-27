@@ -1,0 +1,14 @@
+body {
+    background-color: violet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 100px; 
+    padding: 50px;
+}
+
+h1, h5 {
+    color: aquamarine;
+}
+
+img{
+    max-width: 500px;
+}

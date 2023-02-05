@@ -12,3 +12,9 @@ h1, h5 {
 img{
     max-width: 500px;
 }
+
+ul {
+    list-style-type:circle;
+    list-style-position: inside;
+    list-style-image: url();
+}

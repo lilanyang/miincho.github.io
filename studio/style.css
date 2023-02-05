@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'dm_monomedium_italic';
+    src: url('../fonts/dmmono-mediumitalic-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-mediumitalic-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'dm_monoregular';
+    src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+    background-color: black;
+    color:white;
+    font-family: 'dm_monoregular';
+}
+
+/** grid stuff **/
+.item1 { 
+    grid-area: title; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: flex-start;
+    opacity: 50%;
+    margin-left: 50px;
+}
+
+.item2 { 
+    grid-area: endings;
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: flex-start;
+    margin-left: 50px;
+ }
+.item3 { 
+    grid-area: poem;
+    align-items: center; 
+    justify-content: center;
+    display:flex;
+    font-style: italic;
+ }
+
+.item4 {
+     grid-area: select; 
+    }
+
+.item5 {
+     grid-area: consequence; 
+     color: darkred;
+     display: flex; 
+     align-items: flex-end; 
+     justify-content: flex-start;
+    }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'title endings consequence'
+    'poem select consequence'
+    'poem select consequence';
+  gap: 10px;
+  /**background-color: #2196F3;**/
+  padding: 10px;
+}
+
+.grid-container > div {
+  /**background-color: rgba(255, 255, 255, 0.8);**/
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+
+
+
+
+/** scroll links **/
+
+.vertical-menu {
+    height: 150px;
+    overflow-y: auto;
+    direction: rtl;
+}
+
+.vertical-menu a {
+    /**background-color: #eee;**/
+    color: rgb(91, 91, 91); 
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    /**background-color: #4CAF50;**/
+    color: white;
+}
+
+
+
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+    border-radius: 8px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5e5e5e; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+  }

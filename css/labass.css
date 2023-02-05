@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'averia_gruesa_libreregular';
+    src: url('../fonts/averiagruesalibre-regular-webfont.woff') format('woff2'),
+         url('../fonts/averiagruesalibre-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'space_grotesklight';
+    src: url('../fonts/spacegrotesk-variablefont_wght-webfont.woff') format('woff2'),
+         url('../fonts/spacegrotesk-variablefont_wght-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color:rgb(183, 218, 188);
+}
+
+
+.thumbnail {
+    max-width: 80%;
+    
+}
+h2 {
+    font-family: 'space_grotesklight';
+    color:rgb(87, 41, 81)
+}
+
+p {
+    font-family: 'averia_gruesa_libreregular';
+    font-weight:bold;
+}

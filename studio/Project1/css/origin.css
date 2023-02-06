@@ -22,5 +22,32 @@ body {
     color:white;
     font-family: 'dm_monoregular';
     padding-right:35%;
-    line-height: 1.5;
+    padding-top:3%;
+    padding-left:5%;
+    line-height: 1.5; 
+    font-size: 1.5em;
+}
+
+
+a {
+    color: rgb(137, 137, 137);
+    text-decoration: none;
+  }
+
+a:hover {
+    color: rgb(207, 0, 0);
+}
+
+
+
+
+/* pop up tab stuff */
+#topsemi {
+    position: fixed;
+    top:0%;
+}
+
+#bottsemi {
+    position: fixed;
+    bottom:0%;
 }

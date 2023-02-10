@@ -18,20 +18,44 @@
 }
 
 body {
-    background-color:rgb(183, 218, 188);
+    background-color:rgb(0, 0, 0);
+    
 }
 
 
 .thumbnail {
-    max-width: 80%;
-    
+    max-width: 500px;
+    padding: 5%; 
 }
+
+.thumbnail:hover {
+    filter: drop-shadow(8px 10px 4px #4444dd);
+}
+
+
 h2 {
-    font-family: 'space_grotesklight';
-    color:rgb(87, 41, 81)
+    padding: 5%;
+    font-family: 'averia_gruesa_libreregular';
+    color:rgb(190, 190, 190);
+
 }
+
+
 
 p {
     font-family: 'averia_gruesa_libreregular';
     font-weight:bold;
+    padding-left: 5%;
+    color:rgb(190, 190, 190);
+    text-decoration: none;
+}
+
+#links{
+    text-decoration: none;
+    color:rgb(105, 189, 88)
+}
+
+#links:hover {
+    text-decoration: none;
+    color:rgb(90, 12, 12)
 }

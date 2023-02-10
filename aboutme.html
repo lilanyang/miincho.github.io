@@ -5,12 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/aboutme.css">
 </head>
 <body>
-    <div>
-        <h2>i like pasta</h2>
-        <p>i have a dog</p>
-    </div>
+
+
+
+    <div class="grid-container">
+        <div class="item1">        
+            <p>
+            Hi, my name is Minkyung :) <br> <br>
+
+            some of my interests are playing 
+            games like chess (even though i 
+            suck) and minecraft. i also really 
+            like music; although, my taste is 
+            all over the place. <br> <br>
+            
+            
+            here's some books im currently <br> reading or planning to read
+            
+            <li>Wind-Up Bird Chronicle</li>
+
+            <li> Crime & Punishment</li>
+
+            <li> A Little Life</li>
+            </p>
+        </div>
+
+
+        <div class="item2">
+            <p id="instruction">set the scene</p>
+            <img class="props" id="bigcow" src="imgs/bigcow.png">
+            <img class="props" id="brownmush" src="imgs/brownmush.png">
+            <img class="props" id="redmush" src="imgs/redmush.png">
+            <img class="props" id="smallcow" src="imgs/smallcow.png">
+        </div>
+
+        <div class="item3">
+            <img id="land" src="imgs/land.png">
+        </div>  
+
+      </div>
+
+
+      <script>
+        $(document).ready(function() {$(".props").draggable(); })
+        $(document).ready(function() {$("#bigcow").hover(function(){$("#smallcow").show();});})
+        $(document).ready(function() {$("#smallcow").hover(function(){$("#brownmush").show();});})
+        $(document).ready(function() {$("#brownmush").hover(function(){$("#redmush").show();});})
+
+      </script>
+
 </body>
 </html>

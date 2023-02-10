@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To abandon</title>
+    <link rel="stylesheet" type="text/css" href="../Project1/css/abandon.css">
 </head>
 <body>
-    
+
+<div id="instruction">
+    <p>click to read</p>
+</div>
+
+
+
+<script>
+        const images= [
+        "imgs/abandon1.png", "imgs/abandon2.png", "imgs/abandon3.png",
+        "imgs/abandon4.png", "imgs/abandon5.png" 
+        ]
+
+        let i = 0 
+        function placeImage(x, y) {
+
+            const nextImage = images[i]
+
+            const img = document.createElement("img")
+            img.setAttribute("src", nextImage)
+            img.style.left = x + "px"
+            img.style.top = y + "px"
+
+            document.body.appendChild(img)
+
+            i = i + 1
+
+            if (i >= images.length) { 
+                i=0
+            }
+        }
+
+    document.addEventListener("click", function(event){
+        event.preventDefault()
+        placeImage (event.pageX, event.pageY)
+    })
+</script>
+
+
 </body>
 </html>

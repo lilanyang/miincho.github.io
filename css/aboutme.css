@@ -1,38 +1,129 @@
 @font-face {
-    font-family: 'shokakisararigyotairegular';
-    src: url('../fonts/eeseeeeteisae-webfont.woff2') format('woff2'),
-         url('../fonts/eeseeeeteisae-webfont.woff') format('woff');
+    font-family: 'averia_gruesa_libreregular';
+    src: url('../fonts/averiagruesalibre-regular-webfont.woff') format('woff2'),
+         url('../fonts/averiagruesalibre-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 
 body {
-    background-image: url("../imgs/lake.jfif");
-    background-repeat: repeat;
-    background-position: top;
-    background-color: darkgreen;
-
+    background-color:black;
 }
+
+
+.item1 { 
+    grid-area: content;
+    min-width: 400px;
+    max-width: 7ch;
+ }
+.item2 { grid-area: items; }
+.item3 { grid-area: scene; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'content items'
+    'content scene';
+  gap: 10px;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 
 h2 {
     color:rgb(255, 175, 175);
-    font-family: 'shokakisararigyotairegular';
+    font-family: 'averia_gruesa_libreregular';
     text-align: center;
 }
 
 p {
     color:beige;
-    font-family: 'shokakisararigyotairegular';
-    font-weight: bolder;
-    text-align: center;
+    font-family: 'averia_gruesa_libreregular';
+    text-align: left;
     
 }
 div {
-    border-style: dashed;
-    border-color: aquamarine;
     border-width: thick;
-    margin: 100px;
-    padding: 50px;
 
 }
+
+
+p{
+    padding: 5%;
+    margin-left: 5%;
+}
+
+li{
+    font-family: 'averia_gruesa_libreregular';
+    text-align: left;
+    color: rgb(170, 210, 76);
+    text-indent: 10%;
+    font-size: 0.8em;
+}
+
+#instruction {
+    opacity: 60%;
+    text-align: center;
+}
+
+
+/* minecraft stuff */
+.props {
+    width: 8em;
+    height: auto;
+}
+
+#land {
+    width: 30em;
+    -webkit-user-drag: none;
+}
+
+#brownmush {
+    display:none;
+}
+
+#redmush {
+    display:none;
+}
+
+#smallcow {
+    display:none; 
+}
+
+
+/*media query*/
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-areas:
+        'content'
+        'items'
+        'scene';
+    }
+
+    #land{
+        width: 20em;
+        height: auto;
+    }
+
+    .props {
+        width: 5em;
+        height: auto;
+    }
+
+  }
+
+
+
+
+
+
+

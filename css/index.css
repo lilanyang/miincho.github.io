@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: violet;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 100px; 
@@ -18,3 +18,112 @@ ul {
     list-style-position: inside;
     list-style-image: url();
 }
+*/
+
+
+@font-face {
+    font-family: 'averia_gruesa_libreregular';
+    src: url('../fonts/averiagruesalibre-regular-webfont.woff') format('woff2'),
+         url('../fonts/averiagruesalibre-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*grid layout*/
+body {
+    background-color: black;
+    margin-top: 3%;
+}
+
+.item1 { grid-area: knight; }
+.one { grid-area: caption1; }
+.item2 { grid-area: pawn; }
+.two { grid-area: caption2; }
+.item3 { grid-area: queen; }
+.three { grid-area: caption3; }
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'knight pawn queen'
+    'caption1 caption2 caption3';
+    /*background-color: #2196F3;*/
+    padding: 10px;
+  }
+
+
+.grid-container > div {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    align-self: flex-end;
+  }
+
+
+/*images*/
+.pieces {
+    padding: 1em;
+    border-radius: 10px;
+    width: fit-content;
+    transition: 0.5s;
+
+}
+
+.pieces:hover {
+    box-shadow: 0 0 3px black;
+    margin-top: -10px;
+    filter: drop-shadow(8px 10px 4px #4444dd);
+  }
+
+
+/*button colors */
+.white {
+    font-size: 70%;
+    font-family: 'averia_gruesa_libreregular';
+}
+
+.black {
+    font-size: 70%;
+    background-color: black;
+    color: white;
+    font-family: 'averia_gruesa_libreregular';
+}
+
+.one, .two, .three {
+    grid-template-rows: auto;
+}
+
+
+
+/* button spin animation*/
+  button{
+    animation: rotate360 1.2s linear infinite;  /* animation set */
+    animation-play-state: paused;               /* ...but paused */
+  }
+  button:hover{
+    animation-play-state: running;              /* Run on hover! */
+  }
+  @keyframes rotate360 {
+    to { transform: rotate(360deg); }           
+  }
+
+  /*media query */
+
+  @media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-areas:
+        'knight'
+        'caption1'
+        'pawn'
+        'caption2'
+        'queen'
+        'caption3';
+    }
+  }
+
+
+  

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'dm_monomedium_italic';
+  src: url('../fonts/dmmono-mediumitalic-webfont.woff') format('woff2'),
+       url('../fonts/dmmono-mediumitalic-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'dm_monoregular';
+  src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+       url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: black;
+    font-family: 'dm_monoregular';
+    color:white;
+}
+
+
+.item1 { grid-area: top1; }
+.item2 { grid-area: top2; }
+.item3 { grid-area: top3; }
+.item4 { grid-area: bot1; }
+.item5 { grid-area: bot2; }
+.item6 { grid-area: bot3; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'top1 top2 top3'
+    'bot1 bot2 bot3';
+  gap: 10px;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 20px 0;
+}
+
+#begintext {
+  text-align: right;
+}
+
+#endtext {
+  text-align: left;
+}
+
+
+#one:hover, #two:hover,  #three:hover,  #four:hover,  #five:hover,  #six:hover, #seven:hover {
+  color:red;
+
+  
+}
+

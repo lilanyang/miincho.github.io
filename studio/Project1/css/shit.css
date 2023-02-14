@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'dm_monoregular';
+    src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#move {
+    width:50px;
+    height:50px;
+    color:rgb(173, 0, 0);
+    text-decoration: underline;
+    text-align:center;
+    position:relative;
+}
+
+
+body {
+    font-family: 'dm_monoregular'; 
+    padding-right:35%;
+    padding-top:3%;
+    padding-left:5%;
+    line-height: 1.5; 
+    font-size: 1.8em;
+    color: white;
+
+}
+
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+

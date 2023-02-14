@@ -22,6 +22,7 @@ body {
     font-family: 'dm_monoregular';
 }
 
+
 /** grid stuff **/
 .item1 { 
     grid-area: title; 
@@ -58,6 +59,10 @@ body {
      align-items: flex-end; 
      justify-content: flex-start;
     }
+
+  .item5:hover {
+    color: rgb(255, 255, 255);
+  }
 
 
 .grid-container {

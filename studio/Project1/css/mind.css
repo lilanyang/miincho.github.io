@@ -32,16 +32,22 @@ body {
     padding-left:5%;
     line-height: 1.5; 
     font-size: 1.8em;
+    text-decoration: none;
 }
 
-
+.bold2{
+    display: none;
+    
+}
 
 @media screen and (max-width: 900px) {
 
-.bold {
+.bold1,.bold0 {
     color: white;
 }
-
+.bold2{
+    display: none;
+}
 #text {
     color: rgb(152, 152, 152);
 }
@@ -50,23 +56,39 @@ body {
 
 @media screen and (max-width: 750px) {
 
-    .bold {
+    .bold1 ,.bold0{
         color: white;
     }
     
     #text {
         color: rgb(111, 111, 111);
     }
-    
+    .bold2{
+        display: none;
+        
+    }
     }
 
 
     @media screen and (max-width: 600px) {
 
-        .bold {
-            color: white;
+        .bold1 {
+            display: none;
+            
+        }
+        .bold2{
+            color:red;
+            display: block;
         }
         
+        #link{
+            text-decoration: none;
+        }
+
+        #link:hover{
+            text-decoration: none;
+        }
+
         #text {
             color: rgb(45, 45, 45);
         }

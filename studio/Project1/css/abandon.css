@@ -17,7 +17,7 @@
 
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     font-family: 'dm_monomedium_italic';
 }
 
@@ -34,13 +34,26 @@ img {
     top: 300px;
     left: 400px;
     transform: translate (-50%,-50%);
-    width:30%;
+    width:20%;
     height:auto;
-    animation: fadein 0.7s;
+    animation: fade 0.5s;
+    -webkit-user-drag: none;
+
  }
 
- @keyframes fadein {
+
+ @keyframes fade {
     0% {opacity: 0;}
     100% {opacity: 1;}
  }
   
+ #end{
+    z-index:1;
+    -webkit-user-drag: none;
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+ }
+

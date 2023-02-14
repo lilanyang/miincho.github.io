@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'dm_monoregular';
+    src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background-color: black;
+    color: rgb(130, 130, 130);
+    font-family: 'dm_monoregular';
+    padding-top:3%;
+    padding-left:5%;
+    line-height: 1.5; 
+    font-size: 1.8em;
+}
+
+p{
+    text-align: left;
+}
+
+span{
+    color:red;
+}
+
+
+.item1 { 
+    grid-area: text; 
+}
+
+.item2 { 
+    grid-area: buttons;
+ }
+
+#idBut, #idReset {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'dm_monoregular';
+    font-size: 0.7em;
+    margin-top: 15%;
+}
+
+#idBut:hover, #idReset:hover {
+    color: rgb(174, 15, 15);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'text buttons';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

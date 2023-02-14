@@ -13,18 +13,23 @@
     <p>click to read</p>
 </div>
 
+<div>
+    <img id="end" src="imgs/THEend.png">
+</div>
+
 
 
 <script>
         const images= [
         "imgs/abandon1.png", "imgs/abandon2.png", "imgs/abandon3.png",
-        "imgs/abandon4.png", "imgs/abandon5.png" 
+        "imgs/abandon4.png", "imgs/abandon5.png",  
         ]
 
         let i = 0 
         function placeImage(x, y) {
 
             const nextImage = images[i]
+
 
             const img = document.createElement("img")
             img.setAttribute("src", nextImage)
@@ -35,6 +40,7 @@
 
             i = i + 1
 
+            //loops images back to starting point
             if (i >= images.length) { 
                 i=0
             }
@@ -44,6 +50,12 @@
         event.preventDefault()
         placeImage (event.pageX, event.pageY)
     })
+
+    document.addEventListener("touchend", function(event){
+        event.preventDefault()
+        placeImage (event.pageX, event.pageY)
+    })
+
 </script>
 
 

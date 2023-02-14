@@ -1,55 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discovered</title>
-    <link rel="stylesheet" type="text/css" href="../Project1/css/origin.css">
+    <title>trace</title>
+    <link rel="stylesheet" href="../Project1/css/origin2.css">
+    <script type="text/javascript" src="../Project1/js/origin2.js"></script>
+	<script type="text/javascript" src="../Project1/js/paper-full.min.js"></script>
+
+	<script type="text/paperscript" canvas="canvas" data-paper-ignore="true">
+		
+		// Based on 'JPEG Raster' by Jonathan Puckey:
+		// http://www.flickr.com/photos/puckey/3179779686/in/photostream/
+		
+		// Create a raster item using the image with id='mona'
+		var raster = new Raster('mona');
+		
+		// Make the raster invisible:
+		raster.visible = false;
+		
+		var lastPos = view.center;
+		function moveHandler(event) {
+			if (lastPos.getDistance(event.point) < 10)
+				return;
+			lastPos = event.point;
+		
+			var size = this.bounds.size.clone();
+			var isLandscape = size.width > size.height;
+		
+			// If the path is in landscape orientation, we're going to
+			// split the path horizontally, otherwise vertically:
+		
+			size /= isLandscape ? [2, 1] : [1, 2];
+		
+			var path = new Path.Rectangle({
+				point: this.bounds.topLeft.floor(),
+				size: size.ceil(),
+				onMouseMove: moveHandler
+			});
+			path.fillColor = raster.getAverageColor(path);
+		
+			var path = new Path.Rectangle({
+				point: isLandscape
+					? this.bounds.topCenter.ceil()
+					: this.bounds.leftCenter.ceil(),
+				size: size.floor(),
+				onMouseMove: moveHandler
+			});
+			path.fillColor = raster.getAverageColor(path);
+		
+			this.remove();
+		}
+		
+		function onResize(event) {
+			project.activeLayer.removeChildren();
+		
+			// Transform the raster so that it fills the bounding rectangle
+			// of the view:
+			raster.fitBounds(view.bounds, true);
+		
+			// Create a path that fills the view, and fill it with
+			// the average color of the raster:
+			new Path.Rectangle({
+				rectangle: view.bounds,
+				fillColor: raster.getAverageColor(view.bounds),
+				onMouseMove: moveHandler
+			});
+		}
+			</script>
+
+
+    <script type="text/paperscript" canvas="canvas">
+
+		// Based on 'JPEG Raster' by Jonathan Puckey:
+		// http://www.flickr.com/photos/puckey/3179779686/in/photostream/
+		
+		// Create a raster item using the image with id='mona'
+		var raster = new Raster('text');
+		
+		// Make the raster invisible:
+		raster.visible = false;
+		
+		var lastPos = view.center;
+		function moveHandler(event) {
+			if (lastPos.getDistance(event.point) < 10)
+				return;
+			lastPos = event.point;
+		
+			var size = this.bounds.size.clone();
+			var isLandscape = size.width > size.height;
+		
+			// If the path is in landscape orientation, we're going to
+			// split the path horizontally, otherwise vertically:
+		
+			size /= isLandscape ? [2, 1] : [1, 2];
+		
+			var path = new Path.Rectangle({
+				point: this.bounds.topLeft.floor(),
+				size: size.ceil(),
+				onMouseMove: moveHandler
+			});
+			path.fillColor = raster.getAverageColor(path);
+		
+			var path = new Path.Rectangle({
+				point: isLandscape
+					? this.bounds.topCenter.ceil()
+					: this.bounds.leftCenter.ceil(),
+				size: size.floor(),
+				onMouseMove: moveHandler
+			});
+			path.fillColor = raster.getAverageColor(path);
+		
+			this.remove();
+		}
+		
+		function onResize(event) {
+			project.activeLayer.removeChildren();
+		
+			// Transform the raster so that it fills the bounding rectangle
+			// of the view:
+			raster.fitBounds(view.bounds, true);
+		
+			// Create a path that fills the view, and fill it with
+			// the average color of the raster:
+			new Path.Rectangle({
+				rectangle: view.bounds,
+				fillColor: raster.getAverageColor(view.bounds),
+				onMouseMove: moveHandler
+			});
+		}
+	</script>
+			
 </head>
 <body>
-    <p>
-        How can the 
-        
-        <a href="pop1.html" 
-            onclick="positionedPopup(this.href,'Window 1','450','445','50%','50%','yes');return false"> origins
-        </a> 
-        
-        be traced when there is 
-        <a href="pop2.html" 
-            onclick="positionedPopup(this.href,'Window 2','450','445','50%','50%','yes');return false"> no form
-        </a> 
-        
-        or shape that precedes it to trace? It is exactly like 
-        tracing the moment of the 
-        
-        <a href="pop3.html" 
-            onclick="positionedPopup(this.href,'Window 3','450','445','50%','50%','yes');return false"> big bang
-        </a> 
-        
-        
-        —we can go back to a nanosecond before the beginning, 
-        before the universe burst into being, but we can’t go back to the precise beginning 
-        because that would 
-
-        <a href="pop3.html" 
-            onclick="positionedPopup(this.href,'Window 4','450','445','50%','50%','yes');return false"> precede knowledge
-        </a> 
-        
-    
-        , and we can’t “know” anything before “knowing” itself was born. 
-    </p>
-
-    <script>
-        var popupWindow = null;
-        function positionedPopup(url,winName,w,h,t,l,scroll){
-        settings =
-        'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
-        popupWindow = window.open(url,winName,settings)
-        }
-        $(document).ready(function() {$(".entry").draggable(); })
-        Splitting();
-    </script>
-
+    <canvas id="canvas" resize></canvas>
+    <img width="512" height="512" id="text" style="display: none;" src="imgs/trace2.jpg">
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weird shit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../Project1/css/shit.css">
+
+</head>
+<body>
+
+
+    <p>
+        As the poet Ralph angel puts it, 
+        “The poem is an interpretation of 
+        weird theatrical shit.” the 
+        
+        <a id="move" href="https://youtu.be/6gYBXRwsDjY">
+            weird theatrical shit
+        </a>
+        
+        
+        
+        is what goes on around 
+        us every day of our lives; an animal 
+        of only instinct. I believe many fine 
+        poems begin with ideas, but if you tell 
+        too many faces this, or tell it too loudly, 
+        they will get the wrong idea. 
+    </p>
+
+
+
+    <script>
+        $("#move").mouseenter(function () {
+
+        $(this).animate({
+            top: Math.random() * 300
+        }, 100);
+        $(this).animate({
+            left: Math.random() * 300
+        }, 100);
+
+        });
+    </script>
+
+</body>
+</html>

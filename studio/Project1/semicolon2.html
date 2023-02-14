@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semi semi?</title>
+    <link rel="stylesheet" type="text/css" href="../Project1/css/semicolon2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+
+    <div class="grid-container">
+        <div class="item1">
+            <p>
+                The mind acts, the mind wills a poem, often against our own will <span>;</span>
+                somehow this happens, somehow a poem gets written in the middle 
+                of a chaotic holiday party that has just run out of ice, and 
+                it's your house. 
+                
+                A poem by Glandolyn Blue does not sound like a poem by Timothy Sure. 
+                to pretend, feign, impersonate. That, too, yes and always, because 
+                self-consciousness is its own pretension, and has been from its beginning<span>;</span> 
+                the human mind is capable of a great elastic theatre. As the poet Ralph 
+                angel puts it, “The poem is an interpretation of weird theatrical shit.” 
+                the weird theatrical shit is what goes on around us every day of our lives<span>;</span> 
+                an animal of only instinct, Johnny Ferret, has in his actions drama, 
+                but no theater<span>;</span> theater requires that you draw a circle around the action 
+                and observe it from outside the circle<span>;</span> in other words, self-consciousness is theatre. 
+        
+                When I told Mr. Angel about the lifelong sentence, he said: “That’s a lot of 
+                semicolons!” he is absolutely right<span>;</span> the sentence would be unwieldy and 
+                awkward and resemble the novel of a savant, but the next time you use a 
+                semicolon (which, by the way, is the least-used mark of punctuation in 
+                all of poetry) you should stop and be thankful that there exists this 
+                little thing, invented by a human being—an Italian as a matter of fact—that 
+                allows us to go on and keep on connecting speech that for all apparent 
+                purposes is unrelated. 
+        
+                Gaston Bachelard says the single most succinct and astonishing thing: 
+                We begin in admiration and we end by organizing our disappointment. 
+                The moment of admiration is the experience of something unfiltered, 
+                vital and fresh—it could also be horror—and the moment of organization 
+                is both the onset of disappointment and its dignification<span>;</span> the least we 
+                can do is dignify our knowingness, the loss of some vitality through 
+                familiarization, by admiring not the thing itself but how we can organize 
+                it, think about it. 
+        
+            </p>
+        </div>
+        <div class="item2">
+            <input id=idBut type=button value="give thanks :)" />
+            <button id=idReset onClick="window.location.href=window.location.href">reset</button>
+        </div>
+
+      </div>
+
+
+    
+
+
+
+
+
+    <script>
+        $("#idBut").click(function() {
+            $("body").children().each(function() {
+                $(this).html($(this).html().replace(/;/g,"!!!!"));
+            });
+        });
+
+
+        //const element = document.querySelector('#lettersList');
+        //element.innerHTML = element.innerHTML.replace('o', '<span style="color: red;">o</span>');
+    </script>
+</body>
+</html>

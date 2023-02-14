@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'dm_monomedium_italic';
+    src: url('../fonts/dmmono-mediumitalic-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-mediumitalic-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'dm_monoregular';
+    src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'dm_monomedium_italic';
+    padding-right:35%;
+    padding-top:3%;
+    padding-left:5%;
+    line-height: 1.5; 
+    font-size: 1.8em;
+}
+
+.curve { 
+	width: 20%;
+	height: auto;
+	float: left;
+	margin-right:2rem; 
+	shape-outside:circle();
+    margin-top:1rem;
+    margin-bottom:1rem;
+    mix-blend-mode: exclusion;
+}
+
+
+
+.curve2{
+    width: 35%;
+	height: auto;
+    margin-left:2rem; 
+	shape-outside:circle();
+    float:right;
+    margin-top:3rem;
+    margin-bottom:1rem;
+    mix-blend-mode: exclusion;
+}
+
+.curve3{
+    width: 10%;
+    float:left;
+    width: 50%;
+	height: auto; 
+	shape-outside:circle();
+    margin-right:2rem; 
+    margin-top:1rem;
+    margin-bottom:1rem;
+    mix-blend-mode: exclusion;
+}
+
+
+
+  span {
+    color:rgb(138, 7, 7);
+  }

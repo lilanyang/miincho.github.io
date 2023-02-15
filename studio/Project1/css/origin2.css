@@ -1,8 +1,25 @@
+@font-face {
+    font-family: 'dm_monoregular';
+    src: url('../fonts/dmmono-regular-webfont.woff') format('woff2'),
+         url('../fonts/dmmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 html,
 body {
     margin: 0;
     overflow: hidden;
     height: 100%;
+    background-color: black;
+}
+
+p{
+    color:white;
+    font-family: 'dm_monoregular';
+    margin-left: 5%;
+    opacity:50%;
 }
 
 /* Scale canvas with resize attribute to full size */

@@ -91,9 +91,10 @@ body {
 /** scroll links **/
 
 .vertical-menu {
-    height: 150px;
+    height: 500px;
     overflow-y: auto;
     direction: rtl;
+    text-align: left;
 }
 
 .vertical-menu a {

@@ -1,12 +1,12 @@
 
-//function preload(){
-//font = loadFont('fonts/DMMono-Regular.otf');
-//}
+function preload(){
+font = loadFont('fonts/DMMono-Regular.otf');
+}
 
 
 let gridSize = 3;
 let points = [];
-//let font;
+let font;
 
 
 
@@ -16,7 +16,7 @@ let points = [];
 
         
         background(255);
-        //textFont(font);
+        textFont(font);
         textSize(70);
         textAlign(LEFT);
         fill(0);

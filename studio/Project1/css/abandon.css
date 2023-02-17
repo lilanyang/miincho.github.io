@@ -15,6 +15,18 @@
     font-style: normal;
 }
 
+#home{
+    right:0px;
+    bottom:0px;
+    padding-right:5%;
+    width:5%;
+    height: auto;
+    z-index:5000;
+}
+
+#home:hover{
+    opacity:50%;
+}
 
 body {
     background-color: rgb(0, 0, 0);

@@ -16,15 +16,32 @@
     font-style: normal;
 }
 
+#home{
+    position:relative;
+    bottom:10%;
+    left:5%;
+    padding-right:5%;
+    width:50px;
+    height: auto;
+    z-index:5000;
+  }
+  
+  #home:hover{
+    opacity:50%;
+  }
+
 body{
     background-color: black;
     color: white;
     font-family: 'dm_monomedium_italic';
+    line-height: 1.5; 
+    font-size: 1.8em;
+}
+
+p{
     padding-right:35%;
     padding-top:3%;
     padding-left:5%;
-    line-height: 1.5; 
-    font-size: 1.8em;
 }
 
 .curve { 

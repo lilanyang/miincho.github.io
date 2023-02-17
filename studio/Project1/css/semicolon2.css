@@ -6,19 +6,34 @@
     font-style: normal;
 }
 
+#home{
+    position:relative;
+    bottom:10%;
+    left:5%;
+    padding-right:5%;
+    width:50px;
+    height: auto;
+    z-index:5000;
+  }
+  
+  #home:hover{
+    opacity:50%;
+  }
+
 
 body{
     background-color: black;
     color: rgb(130, 130, 130);
     font-family: 'dm_monoregular';
-    padding-top:3%;
-    padding-left:5%;
     line-height: 1.5; 
     font-size: 1.8em;
 }
 
 p{
     text-align: left;
+    padding-right:35%;
+    padding-top:3%;
+    padding-left:5%;
 }
 
 span{
@@ -32,6 +47,7 @@ span{
 
 .item2 { 
     grid-area: buttons;
+
  }
 
 #idBut, #idReset {
@@ -39,7 +55,9 @@ span{
     color: rgb(255, 255, 255);
     font-family: 'dm_monoregular';
     font-size: 0.7em;
-    margin-top: 15%;
+    margin-top: 18%;
+    padding-right: 18%;
+
 }
 
 #idBut:hover, #idReset:hover {
@@ -55,7 +73,6 @@ span{
 }
 
 .grid-container > div {
-
   text-align: center;
   padding: 20px 0;
   font-size: 30px;

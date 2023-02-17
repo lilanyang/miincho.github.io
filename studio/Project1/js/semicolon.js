@@ -23,7 +23,7 @@ let font;
         noStroke();
         textWrap(WORD);
  
-    text('The mind acts, the mind wills a poem, often against our own will; somehow this happens, somehow a poem gets written in the middle of a chaotic holiday party that has just run out of ice, and its your house. ', 90, 50, 800);
+    text('The mind acts, the mind wills a poem, often against our own will; somehow this happens, somehow a poem gets written in the middle of a chaotic holiday party that has just run out of ice, and its your house. ', 90, 60, 800);
    // text(' “The poem is an interpretation of weird theatrical shit.” the weird theatrical shit is what goes on around us every day of our lives; an animal of only instinct, Johnny Ferret, has in his actions drama, but no theater; theater requires that you draw a circle around  the action and observe it from outside the circle; in other words, self-consciousness is theatre.', width/2, height/2);
 
 

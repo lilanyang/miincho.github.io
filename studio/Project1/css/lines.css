@@ -15,6 +15,20 @@
   font-style: normal;
 }
 
+#home{
+  position:relative;
+  bottom:10%;
+  left:5%;
+  padding-right:5%;
+  width:50px;
+  height: auto;
+  z-index:5000;
+}
+
+#home:hover{
+  opacity:50%;
+}
+
 body {
     background-color: black;
     font-family: 'dm_monoregular';

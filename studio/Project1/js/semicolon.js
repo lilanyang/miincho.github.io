@@ -17,7 +17,7 @@ let font;
         
         background(255);
         textFont(font);
-        textSize(70);
+        textSize(60);
         textAlign(LEFT);
         fill(0);
         noStroke();

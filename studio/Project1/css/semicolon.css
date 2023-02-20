@@ -6,7 +6,19 @@
     font-style: normal;
 }
 
-
+#home{
+    position:relative;
+    bottom:10%;
+    left:5%;
+    padding-right:5%;
+    width:50px;
+    height: auto;
+    z-index:5000;
+  }
+  
+  #home:hover{
+    opacity:50%;
+  }
 
 body{
     background-color: black;
@@ -23,7 +35,7 @@ body{
     font-size: 1.5em;
 }
 
-#button:hover {
-    filter: drop-shadow(5px 5px 4px #a70000);
+p:hover {
+    color: rgb(142, 0, 0);
 }
 

@@ -24,7 +24,7 @@
 		
 		var lastPos = view.center;
 		function moveHandler(event) {
-			if (lastPos.getDistance(event.point) < .00001)
+			if (lastPos.getDistance(event.point) < 10)
 				return;
 			lastPos = event.point;
 		
@@ -75,7 +75,8 @@
 </head>
 <body>
 	<p>expand window</p>
+	
     <canvas id="canvas" resize></canvas>
-    <img width="512" height="512" id="text" style="display: none;" src="imgs/trace2.jpg">
+    <img id="text"  src="imgs/trace2.jpg">
 </body>
 </html>

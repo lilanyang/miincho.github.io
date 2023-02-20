@@ -4,7 +4,7 @@ font = loadFont('fonts/DMMono-Regular.otf');
 }
 
 
-let gridSize = 3;
+let gridSize = 4;
 let points = [];
 let font;
 
@@ -45,7 +45,7 @@ let font;
         background(0);
         
       
-    let = mutationAmt = map( mouseX, 0, width, 1, width/180);
+    let = mutationAmt = map( mouseX, 0, width, 1, width/200);
       randomSeed(0);
       
       

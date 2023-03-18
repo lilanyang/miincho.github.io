@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+    <script>
+
+     /*   
+        console.log("cheese");
+
+        let num = 2;
+        const myConst = true;
+
+        //console.log(num);
+        //console.log(myConst);
+
+        let x = 5;
+        let y = 2;
+        //console.log(x+y);
+        //console.log(x == y);
+        //console.log(x != y);
+
+        console.log(x > 3 && y < 3);  //both statements are correct
+        console.log(x > 3 || y == 3);  //or statement
+        console.log(!(x>3)); //not statement
+
+        console.log(x);
+
+        x+=2; // x = x+2
+        x++;  //x + 1
+        console.log(x);
+
+
+
+        //if else statements
+        let absence = 2;
+        absence++; //absence = absence +1
+
+        if (absence>2) {
+            console.log("you will fail");
+        }
+
+        else if (absence == 2){
+            console.log("danger");
+        }
+
+        else {
+            console.log("you will be fine");
+        }
+    
+
+        //for loop; executes code for specific # of times
+        for  (let i=0; i<5; i++) {
+            console.log(i);
+        }
+
+
+        //(do) while statement
+        let i=0;
+
+        while(i<5) {
+            console.log(i);
+            i++;
+        }
+
+
+        window.onload = () => {
+            const paragraph = document.querySelector("p");
+            const btn = document.querySelector("button");
+  
+            
+            btn.addEventListener("click",() =>{
+                absence++;
+                paragraph.innerHTML = absence;
+
+            });
+
+           // paragraph.innerHTML = Math.random();  //greater than or equal to 0 to 1
+        }
+*/
+
+        const btn = document.querySelector("button");
+
+        function random(number) {
+            return Math.floor(Math.random() * (number+1));
+        }
+
+        btn.addEventListener("click", () => {
+            const rndCol = 'rgb(${random(255)}, ${random(255)}, ${random(255)})';
+            document.body.style.backgroundColor = rndCol;
+        });
+
+    </script>
+</head>
+<body>
+    <p id="bars">rice is white.</p>
+    <!--<button> Absence +1 </button>-->
+    
+    <button> change color</button>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+.headshots {
+    grid-area: heads;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.profileimgs {
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+}
+
+.categories {
+    grid-area: categories;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+    'profile categories categories categories categories categories '
+    'profile info info info info info '
+    'profile heads heads heads heads heads'
+    ;
+    gap: 10px;
+    padding: 10px;
+}
+
+img{
+    width: auto;
+    height: 130px;
+    filter: drop-shadow(-5px 5px 1.5px #746363) saturate(40%);   
+}
+
+img:hover{
+    filter: drop-shadow(-5px 5px 1.5px #746363) saturate(110%);
+}
+
+body{
+    background-color: rgb(199, 199, 199);
+    font-family: 'Averia Gruesa Libre', cursive;
+    color: #383838;
+}
+
+p {
+    text-align:left;
+}
+
+
+
+

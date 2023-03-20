@@ -30,6 +30,49 @@ fetch('profile2.4.json')
     // Set the text content and href attributes for the link
     img.src = "imgs/" + item.Headshot;
 
+    // Filter by gender; "other" button not working 
+    var filterMan = document.querySelector('#manBtn');
+    var filterAll = document.querySelector('#allBtn');
+    var filterWoman = document.querySelector('#womanBtn');
+    var filterOther = document.querySelector('#otherBtn');
+
+    filterAll.addEventListener('click', function () { {
+            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
+            img.style.display = "block"
+        }
+    });
+
+    filterMan.addEventListener('click', function () {
+        if (item.Gender == 'Man') {
+            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
+            img.style.display = "block"
+        } else {
+            img.style.display = "none"
+        }
+    });
+
+    filterWoman.addEventListener('click', function () {
+        if (item.Gender == 'Woman') {
+            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
+            img.style.display = "block"
+        } else {
+            img.style.display = "none"
+        }
+    });
+
+
+    filterOther.addEventListener('click', function () {
+        if (item.Gender ==  'Woman') {
+            img.style.display = "none"
+        } 
+
+        if (item.Gender ==  'Man') {
+            img.style.display = "none"
+        } 
+ 
+    });
+    
+
 
     // Add the link to the list item and the list item to the list
     div.appendChild(img);
@@ -38,10 +81,6 @@ fetch('profile2.4.json')
     });
 })
 .catch(error => console.error(error));
-
-
-
-
 
 
 

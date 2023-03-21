@@ -1,9 +1,13 @@
-
+#reject{
+    border-style: solid;
+    border-color: #383838;
+}
 .headshots {
     grid-area: heads;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    row-gap: 5ch;
 }
 
 .profileimgs {
@@ -13,25 +17,49 @@
     grid-template-rows: repeat(9, 1fr);
 }
 
+.profImgs:hover{
+    transform: scale(1);
+}
+
+#fourth{
+    filter: none;
+    opacity: 100%;
+}
+#fourth:hover{
+    filter: none;
+    transform: scale(1);
+}
+
 .categories {
     grid-area: categories;
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);*/
+    position:fixed;
+    padding-left: 50%;
+
 }
 
 .info {
+    margin: 10%;
     grid-area: info;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
+    text-align: left;
 }
+
+.info2 {
+    margin: 10%;
+    grid-area: info2;
+    display: grid;
+    text-align: left;
+}
+
 
 .grid {
     display: grid;
     grid-template-areas:
     'profile categories categories categories categories categories '
-    'profile info info info info info '
+    'profile info info info2 info2 info2 '
     'profile heads heads heads heads heads'
     ;
     gap: 10px;
@@ -41,11 +69,14 @@
 img{
     width: auto;
     height: 130px;
-    filter: drop-shadow(-5px 5px 1.5px #746363) saturate(40%);   
+    filter: drop-shadow(-5px 5px 1.5px #746363) grayscale(1) blur(4px);
+    opacity: 50%;   
 }
 
 img:hover{
     filter: drop-shadow(-5px 5px 1.5px #746363) saturate(110%);
+    opacity: 100%;
+    transform: scale(1.5);
 }
 
 body{
@@ -55,9 +86,13 @@ body{
 }
 
 p {
-    text-align:left;
+    text-align: center;
+    line-height: px;
 }
 
+.btn {
+    background-color:  rgb(199, 199, 199);
+}
 
 
 

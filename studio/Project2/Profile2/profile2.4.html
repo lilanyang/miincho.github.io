@@ -11,44 +11,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
 
 
 <div class="grid">
+
+<div id="navigation">
+    <button class="nav">home</button>
+    <button class="nav">about</button>
+</div>
+
+
     <div class="categories">
-        <button id="allBtn">All</button>
-        <button id="manBtn">Man</button>
-        <button id="womanBtn">Woman</button>
-        <button id="otherBtn">Other</button>
+        <button class="btn" id="allBtn">All</button>
+        <button class="btn" id="manBtn">Man</button>
+        <button class="btn" id="womanBtn">Woman</button>
+        <button class="btn" id="otherBtn">Other</button>
     </div>
     <div class="info">
-        <p>
+        
             Profile 2 Information: <br>
             Name: Kha <br>
             Age: 20 (January 5th, 2003) <br>
             Gender: Man <br>
-            Sexuality: Pansexual <br>
-            Height: 5'8" <br>
-            School: NYU <br>
-            Religion: Agnostic <br>
-        </p>
+       
     </div>
+    <div class="info2">
+    
+        Sexuality: Pansexual <br>
+        Height: 5'8" <br>
+        School: NYU <br>
+        Religion: Agnostic <br>
+   
+    </div>
+
+
+
     <div id="matches" class="headshots"></div>
+
+
     <div class="profileimgs">
+    <br>
+    
         <!--
-        <img src="profileimgs/1stPhoto.png">
-        <img src="profileimgs/1stPrompt.jpg">
-        <img src="profileimgs/2ndPhoto.png">
-        <img src="profileimgs/3rdPhoto.png">
-        <img src="profileimgs/2ndPrompt.jpg"> 
-        -->
-        <img src="profileimgs/4thPhoto.png">
-        <!--
-        <img src="profileimgs/3rdPrompt.jpg">
-        <img src="profileimgs/5thPhoto.png">
-        <img src="profileimgs/6thPhoto.png">
-        -->
+        <img class="profImgs" src="profileimgs/1stPhoto.png">
+        <img class="profImgs" src="profileimgs/1stPrompt.jpg">
+        <img class="profImgs" src="profileimgs/2ndPhoto.png">
+        <img class="profImgs" src="profileimgs/3rdPhoto.png">
+        <img class="profImgs" src="profileimgs/2ndPrompt.jpg"> 
+
+        <img class="profImgs" src="profileimgs/3rdPrompt.jpg">
+        <img class="profImgs" src="profileimgs/5thPhoto.png">
+        <img class="profImgs" src="profileimgs/6thPhoto.png">
+    
+       --> 
+        <img id="fourth" src="profileimgs/4thPhoto.png">
+
+        <div id="match">
+            <p>view all your matches!</p>
+        </div>
+
+        <div id="reject">
+            <p>reject :( </p>
+        </div>
+       
+
     </div>
 </div>
 

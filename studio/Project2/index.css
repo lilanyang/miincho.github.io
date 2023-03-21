@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* or any other height value */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    width: 200px; /* or any other width value */
+    height: 200px; /* or any other height value */
+    object-fit: cover; /* to preserve aspect ratio */
+    margin: 10px; /* add some spacing between images */
+  }

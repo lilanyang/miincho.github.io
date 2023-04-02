@@ -29,10 +29,19 @@ fetch('profile2.4.json')
                 console.log(dragedElement);
               }
             });
-          } );
+          });
+
+$( ".selector" ).draggable( "disable" );
 
 
 
+    //view all matches
+    $( "view" ).click(function() {
+        $( "matches" ).removeClass( "img" );
+      });
+
+
+          //remove css
 
 /*
           $( function() {
@@ -54,7 +63,9 @@ fetch('profile2.4.json')
 
     // Text appear on hover
     img.addEventListener("mouseenter" , () => {
-        p.innerHTML = item.Name + '<br />' +  item.Age + '<br />' + item.Gender + '<br />'  + item.Comments;
+
+       /* var span = document.createElement('span');
+        span.style =        
         p.style.display = "block";
         p.style.backgroundColor = '#383838';
         p.style.borderRadius = '15%';
@@ -64,12 +75,47 @@ fetch('profile2.4.json')
         p.style.padding = '10px';
         p.style.maxWidth = '120px';
         p.style.marginTop = '40px';
+        p.style.marginLeft = '15px'; // apply your style
+        span.appendChild(document.createTextNode(p.innerHTML = item.Name + '<br />' +  item.Age + '<br />' + item.Gender + '<br />'  + item.Comments));
+        div.appendChild(span);
+    })*/
+
+
+
+
+
+        p.innerHTML = item.Name + '<br />' +  item.Age + '<br />' + item.Gender + '<br />'  + item.Comments;
+        p.style.display = "block";
+        p.style.backgroundColor = '#d9c58b';
+        p.style.color = 'black';
+        p.style.position = 'absolute';
+        p.style.zIndex = '500';
+        p.style.padding = '10px';
+        p.style.maxWidth = '120px';
+        p.style.marginTop = '40px';
         p.style.marginLeft = '15px';
     })
 
     img.addEventListener("mouseleave" , () => {
-        p.style.display = "none"
+     p.style.display = "none"
     })
+
+    //remove text box on drag
+
+ /*   const source = document.getElementById("draggable");
+    img.addEventListener("dragstart", (event) => {
+  // make it half transparent
+ // event.target.classList.add("dragging");
+});*/
+
+
+
+
+    img.addEventListener("dragstart", () => {
+        p.style.display = "none"
+
+    });
+
 
     // Profile info appear on click
     img.addEventListener("click" , () => {
@@ -80,7 +126,7 @@ fetch('profile2.4.json')
     // Set the text content and href attributes for the link
     img.src = "imgs/" + item.Headshot;
 
-    // Filter by gender; "other" button not working 
+    // Filter by gender
     var filterMan = document.querySelector('#manBtn');
     var filterAll = document.querySelector('#allBtn');
     var filterWoman = document.querySelector('#womanBtn');
@@ -112,13 +158,13 @@ fetch('profile2.4.json')
 
 
     filterOther.addEventListener('click', function () {
-        if (item.Gender ==  'Woman') {
-            img.style.display = "none"
+        if (item.Gender != 'Man' && item.Gender != 'Woman') {
+            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
+            img.style.display = "block"
         } 
-
-        if (item.Gender ==  'Man') {
+        else {
             img.style.display = "none"
-        } 
+        }
  
     });
     

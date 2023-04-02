@@ -8,80 +8,135 @@
     <link rel="stylesheet" type="text/css" href="profile2.4.css">
     <script src="profile2.4.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
 </head>
 <body>
 
 
 <div class="grid">
 
-<div id="navigation">
-    <button class="nav">home</button>
-    <button class="nav">about</button>
-</div>
+<div class="header">
 
-
-    <div class="categories">
-        <button class="btn" id="allBtn">All</button>
-        <button class="btn" id="manBtn">Man</button>
-        <button class="btn" id="womanBtn">Woman</button>
-        <button class="btn" id="otherBtn">Other</button>
+    <div class="dropdown">
+        <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
+        <div id="myDropdown" class="dropdown-content">
+          <a href="../messages.html">Messages</a>
+          <a href="../about.html">About</a>
+          <a href="../select.html">Home</a>
+          <a href="#khari">Profile Info</a>
+        </div>
     </div>
-    <div class="info">
+
+
+    
+    <div class="caption">
+        <div class="captionImage">
+            <img class="frame" src="../homeimgs/iconFrame.png">
+            <img id="fourth" src="profileimgs/4thPhoto.png">
+        </div>
+
         
-            Profile 2 Information: <br>
-            Name: Kha <br>
-            Age: 20 (January 5th, 2003) <br>
-            Gender: Man <br>
-       
-    </div>
-    <div class="info2">
-    
-        Sexuality: Pansexual <br>
-        Height: 5'8" <br>
-        School: NYU <br>
-        Religion: Agnostic <br>
-   
+        <div class="CaptionText">
+            <div class="capLeft">
+                <img class="heart" src="../homeimgs/iconHeart.png"> <p>Kha</p>
+            </div>
+            <div class="capRight">
+                <p>76 Likes</p> 
+                <a href="../Project2/profileInfo/khari.html"><img class="info" src="../homeimgs/iconInfo.png"> </a>
+            </div>
+        </div>
     </div>
 
 
+    <div class="context">
+        <div class="contextStats">
+            <p>
+                18.42% of all matches liked this photo <br> <br>
+                64.29% identified as male <br><br>
+                21.43% identified as nonbinary, multigender <br><br>
+                14.29% identified as female <br>
+            </p>
+            <img src="../homeimgs/contextBg.png">
+        </div>
+    </div>
 
-    <div id="matches" class="headshots"></div>
 
+    <div class="profileMenu">
+        <div class="contextBanner"> 
+            <p>Profile Sections</p>
+            <img src="../homeimgs/banner.png">
+        </div>
+        <div class="menu">
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 1st Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 2nd Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 3rd Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 4th Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 5th Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 6th Photo</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 1st Prompt</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 2nd Prompt</div>
+            <div><img class="circle" src="../homeimgs/iconHead.png"> 3rd Prompt</div>
+        </div>
+    </div>
 
-    <div class="profileimgs">
-    <br>
-    
-        <!--
-        <img class="profImgs" src="profileimgs/1stPhoto.png">
-        <img class="profImgs" src="profileimgs/1stPrompt.jpg">
-        <img class="profImgs" src="profileimgs/2ndPhoto.png">
-        <img class="profImgs" src="profileimgs/3rdPhoto.png">
-        <img class="profImgs" src="profileimgs/2ndPrompt.jpg"> 
-
-        <img class="profImgs" src="profileimgs/3rdPrompt.jpg">
-        <img class="profImgs" src="profileimgs/5thPhoto.png">
-        <img class="profImgs" src="profileimgs/6thPhoto.png">
-    
-       --> 
-        <img id="fourth" src="profileimgs/4thPhoto.png">
-
-        <div id="match">
-            <p>view all your matches!</p>
+    <div id="reject">
+        <div class="contextBanner">
+            <p>Reject Pile</p>
+            <img src="../homeimgs/banner.png">
         </div>
 
-        <div id="reject">
-            <p>reject :( </p>
-        </div>
-       
+        <img id="trash" src="../homeimgs/iconTrash.png">
+    </div>
 
+</div>
+
+
+<div class="content">
+    <div class="categories">
+        <img class="btn" id="allBtn" src="../homeimgs/catAll.png">
+        <img class="btn" id="manBtn" src="../homeimgs/catMale.png">
+        <img class="btn" id="womanBtn" src="../homeimgs/catFemale.png">
+        <img class="btn" id="otherBtn" src="../homeimgs/CatNon.png">
     </div>
 </div>
+
+
+
+    <!--JSON data goes here-->
+    <div id="matches" class="headshots">
+    </div>
+
+
+
+
+        <!--dropdown menu function-->
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+
 
    
 </body>

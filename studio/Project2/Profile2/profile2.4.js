@@ -1,90 +1,27 @@
-
 fetch('profile2.4.json')
-.then(response => response.json())
-.then(data => {
+  .then(response => response.json())
+  .then(data => {
     // Get the list element
     const matches = document.getElementById('matches');
 
     // Loop through the data and add each item to the list
     data.forEach(item => {
-    const div = document.createElement('div');
-    const p = document.createElement('p');
-    const img = document.createElement('img');
+      const div = document.createElement('div');
+      const p = document.createElement('p');
+      const img = document.createElement('img');
 
-     //match and reject drag drop
-    $( function() {
-        $( "img" ).draggable();
-        $( "#reject" ).droppable({
-            drop: function( event, ui ) {
-                $( this )
-                  .find( "p" )
-                    .html( "rejected" );
-              },
-              
-              drop: function(event, ui) {
-                var dragedElement = ui.draggable.text();
-                var dropped = ui.draggable;
-                console.log(dropped);
-                dropped.hide();
-                console.log(dragedElement);
-              }
-            });
-          });
-
-$( ".selector" ).draggable( "disable" );
-
-
-
-    //view all matches
-    $( "view" ).click(function() {
-        $( "matches" ).removeClass( "img" );
+      // Match and reject drag drop
+      $("#matches img").draggable();
+      $("#reject").droppable({
+        drop: function(event, ui) {
+          ui.draggable.hide();
+        }
       });
 
 
-          //remove css
-
-/*
-          $( function() {
-            $( "reject" ).droppable();
-            $( "img" ).draggable({
-                drop:function( event, ui ) {
-                    $( this )
-                      .find( "img" )
-                      $( this ).hide();
-                  }
-                });
-              } );
-*/
-
-
-
-
-
-
-    // Text appear on hover
-    img.addEventListener("mouseenter" , () => {
-
-       /* var span = document.createElement('span');
-        span.style =        
-        p.style.display = "block";
-        p.style.backgroundColor = '#383838';
-        p.style.borderRadius = '15%';
-        p.style.color = 'white';
-        p.style.position = 'absolute';
-        p.style.zIndex = '500';
-        p.style.padding = '10px';
-        p.style.maxWidth = '120px';
-        p.style.marginTop = '40px';
-        p.style.marginLeft = '15px'; // apply your style
-        span.appendChild(document.createTextNode(p.innerHTML = item.Name + '<br />' +  item.Age + '<br />' + item.Gender + '<br />'  + item.Comments));
-        div.appendChild(span);
-    })*/
-
-
-
-
-
-        p.innerHTML = item.Name + '<br />' +  item.Age + '<br />' + item.Gender + '<br />'  + item.Comments;
+      // Text appear on hover
+      img.addEventListener("mouseenter", () => {
+        p.innerHTML = item.Name + '<br />' + item.Age + '<br />' + item.Gender + '<br />' + item.Comments;
         p.style.display = "block";
         p.style.backgroundColor = '#d9c58b';
         p.style.color = 'black';
@@ -94,88 +31,63 @@ $( ".selector" ).draggable( "disable" );
         p.style.maxWidth = '120px';
         p.style.marginTop = '40px';
         p.style.marginLeft = '15px';
-    })
+      });
+      
 
-    img.addEventListener("mouseleave" , () => {
-     p.style.display = "none"
-    })
+      
+      // Hide text when mouse leaves the image
+      img.addEventListener("mouseleave", () => {
+        p.style.display = "none";
+      });
 
-    //remove text box on drag
-
- /*   const source = document.getElementById("draggable");
-    img.addEventListener("dragstart", (event) => {
-  // make it half transparent
- // event.target.classList.add("dragging");
-});*/
-
-
-
-
-    img.addEventListener("dragstart", () => {
-        p.style.display = "none"
-
-    });
-
-
-    // Profile info appear on click
-    img.addEventListener("click" , () => {
-        p.textContent = item.Profile ;
+      // Profile info appear on click
+      img.addEventListener("click", () => {
+        p.textContent = item.Profile;
         p.style.display = "block"
-    })
+      });
 
-    // Set the text content and href attributes for the link
-    img.src = "imgs/" + item.Headshot;
+      // Set the src attribute for the image
+      img.src = "imgs/" + item.Headshot;
 
-    // Filter by gender
-    var filterMan = document.querySelector('#manBtn');
-    var filterAll = document.querySelector('#allBtn');
-    var filterWoman = document.querySelector('#womanBtn');
-    var filterOther = document.querySelector('#otherBtn');
+      // Add the div and p elements to the list item
+      div.appendChild(img);
+      div.appendChild(p);
 
-    filterAll.addEventListener('click', function () { {
-            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
-            img.style.display = "block"
-        }
-    });
+      // Filter by gender
+      const filterMan = document.querySelector('#manBtn');
+      const filterAll = document.querySelector('#allBtn');
+      const filterWoman = document.querySelector('#womanBtn');
+      const filterOther = document.querySelector('#otherBtn');
 
-    filterMan.addEventListener('click', function () {
+      filterAll.addEventListener('click', function() {
+        div.style.display = "block";
+      });
+
+      filterMan.addEventListener('click', function() {
         if (item.Gender == 'Man') {
-            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
-            img.style.display = "block"
+          div.style.display = "block";
         } else {
-            img.style.display = "none"
+          div.style.display = "none";
         }
-    });
+      });
 
-    filterWoman.addEventListener('click', function () {
+      filterWoman.addEventListener('click', function() {
         if (item.Gender == 'Woman') {
-            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
-            img.style.display = "block"
+          div.style.display = "block";
         } else {
-            img.style.display = "none"
+          div.style.display = "none";
         }
-    });
+      });
 
-
-    filterOther.addEventListener('click', function () {
+      filterOther.addEventListener('click', function() {
         if (item.Gender != 'Man' && item.Gender != 'Woman') {
-            img.innerHTML = '<img src="imgs/ + item.Headshot" />';
-            img.style.display = "block"
-        } 
-        else {
-            img.style.display = "none"
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
         }
- 
+      });
+
+      matches.appendChild(div);
     });
-    
-
-
-    // Add the link to the list item and the list item to the list
-    div.appendChild(img);
-    div.appendChild(p);
-    matches.appendChild(div);
-    });
-})
-.catch(error => console.error(error));
-
-
+  })
+  .catch(error => console.error(error));

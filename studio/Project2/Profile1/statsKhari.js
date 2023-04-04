@@ -55,6 +55,7 @@ fetch('statsKhari.json')
         // Trigger a click event on the button
         filter1stPhoto.click();
       });
+      
       /*
       window.addEventListener('load', function() {
         // Hide all images and stat info except for filter1stPhoto

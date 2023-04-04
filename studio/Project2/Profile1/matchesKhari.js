@@ -205,6 +205,16 @@ fetch('matchesKhari.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
+
+      window.addEventListener('load', function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+    
+        // Trigger a click event on the button
+        filter1stPhoto.click();
+      });
+
+      
      /*window.addEventListener('load', function() {
         // Hide all images and stat info except for filter1stPhoto
         if (item.Liked === '1st Photo') {

@@ -12,7 +12,7 @@ fetch('statsKhari.json')
       const p = document.createElement('p');
       const img = document.createElement('img');
 
-   /* //load one section at first
+   //load one section at first
     window.addEventListener('load', function() {
     // Get all the profile sections
     //var profileSections = document.querySelectorAll('captionImage');
@@ -24,7 +24,7 @@ fetch('statsKhari.json')
     } else {
         img.style.display = "none";
     }
-});*/
+});
 
 
       // Set the src attribute for the image

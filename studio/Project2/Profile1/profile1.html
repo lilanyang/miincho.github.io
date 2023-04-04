@@ -15,33 +15,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>
-              window.addEventListener('load', function() {
-        // Hide all images and stat info except for filter1stPhoto
-        if (item.Image === '1stPhoto.png') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
-        }
 
-        if (item.Profile === 'Khari1') {
-          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
-            p.style.width = "210px";
-            p.style.display = "flex";
-            p.style.alignItems = "center";
-            p.style.justifyContent = "center";
-      } else {
-            p.style.display = "none";
-      }
-        // Hide all images and stat info except for filter1stPhoto
-        if (item.Liked === '1st Photo') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
-        }
-      });
-
-    </script>
     
 </head>
 <body>
@@ -152,6 +126,33 @@
         <!--dropdown menu function-->
 
         <script>
+
+window.addEventListener('load', function() {
+        // Hide all images and stat info except for filter1stPhoto
+        if (item.Liked === '1st Photo') {
+          img.style.display = "block";
+        } else {
+          img.style.display = "none";
+        }
+        if (item.Image === '1stPhoto.png') {
+          img.style.display = "block";
+        } else {
+          img.style.display = "none";
+        }
+
+        if (item.Profile === 'Khari1') {
+          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
+            p.style.width = "210px";
+            p.style.display = "flex";
+            p.style.alignItems = "center";
+            p.style.justifyContent = "center";
+      } else {
+            p.style.display = "none";
+      }
+
+      });
+     
+
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
             function myFunction() {
@@ -173,13 +174,6 @@
             }
 
 
-
-
-
-           /* for (var i = 1; i < profileSections.length; i++) {
-                profileSections[i].style.display = 'none';
-            }
-            });*/
 
             </script>
 

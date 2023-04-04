@@ -205,7 +205,7 @@ fetch('matchesKhari.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
-      window.addEventListener('load', function() {
+     window.addEventListener('load', function() {
         // Hide all images and stat info except for filter1stPhoto
         if (item.Liked === '1st Photo') {
           img.style.display = "block";

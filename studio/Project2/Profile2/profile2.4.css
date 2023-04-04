@@ -189,13 +189,14 @@ img:hover{
 
 
 #captionImage {
+
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-
+/*CAPTION IMAGE-------------------------------------------------------------------*/
 #captionImage img{
     filter: none;
     opacity: 100%;

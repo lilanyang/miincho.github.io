@@ -212,17 +212,6 @@ fetch('matchesKhari.json')
         } else {
           img.style.display = "none";
         }
-
-
-        /*filter2ndPhoto.style.display = 'none';
-        filter3rdPhoto.style.display = 'none';
-        filter4thPhoto.style.display = 'none';
-        filter5thPhoto.style.display = 'none';
-        filter6thPhoto.style.display = 'none';
-        filter1stPrompt.style.display = 'none';
-        filter2ndPrompt.style.display = 'none';
-        filter3rdPrompt.style.display = 'none';
-      */
       });
 
 

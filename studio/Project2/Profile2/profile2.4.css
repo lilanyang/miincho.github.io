@@ -2,6 +2,7 @@ body {
     background-image: url(../homeimgs/textureBg.png);
     font-family: "t26-carbon", monospace;
     color: #000000;
+    padding-bottom: 90px;
 }
 
 /*scrollbar*/
@@ -41,32 +42,38 @@ body {
     grid-area: heads;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items:flex-start;
-    row-gap: 10px;
-    column-gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
     padding-left:5%;
     padding-right:5%;
+
+
+    /*height: 1000px; 
+    overflow-y: scroll; */
 }
 
+
+
 img{
-    width: auto;
-    height: 130px;
-    filter: drop-shadow(5px 5px #21363a90) sepia(1) blur(3px);
-    opacity: 50%;  
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(5px 5px #21363a90) sepia(1) blur(3px) contrast(0.5);
+    
 }
+
+
 
 img:hover{
     filter: drop-shadow(5px 5px #21363a90);
     transform: translate(-5px, -5px) scale(1.2);
-    opacity: 100%;
 }
 
 
 
 /*stats image and txt */
 
-.contextStats img {
+#contextStats img {
     width:250px;
     height: auto;
     filter:none;
@@ -74,26 +81,22 @@ img:hover{
     margin: -15px;
 }
 
-.contextStats img:hover {
+#contextStats img:hover {
     transform: none;
     filter:none;
     opacity:100%;
 }
 
-.contextStats {
+#contextStats {
     position:relative;
     display:flex;
-    justify-content: flex-start;
-    align-items: center;
     padding: 10px;
 }
 
-.contextStats p {
+#contextStats p {
     position: absolute;
     z-index:2;
     text-align: left;
-    max-width:230px;
-
 
 }
 
@@ -185,7 +188,7 @@ img:hover{
 }
 
 
-.captionImage {
+#captionImage {
     position: relative;
     display: flex;
     justify-content: center;
@@ -193,28 +196,34 @@ img:hover{
 
 }
 
+#captionImage img{
+    filter: none;
+    opacity: 100%;
+    width:250px;
+    height:auto;
+}
+
+#captionImage img:hover{
+    filter: none;
+    opacity: 100%;
+    transform:none;
+}
+
 #fourth{
     filter: none;
     opacity: 100%;
     width: 180px;
     height:auto;
-    position: absolute;
 }
 
-.frame {
+#fourth:hover{
     filter: none;
     opacity: 100%;
-    width: 180px;
-    height:200px; 
-    z-index: 2;
+    transform: none;
 }
 
-#fourth:hover, .frame:hover {
-    filter: none;
-    transform: scale(1);
-}
 
-.categories {
+.categories, .categories2 {
     grid-area: categories;
     display: flex;
     flex-wrap: wrap;
@@ -249,10 +258,28 @@ img:hover{
 }
 
 .btn:hover {
-    transform: none;
-    filter: drop-shadow(5px 5px #21363a90);
+    filter: drop-shadow(2px 2px #21363a90);
+    transform: translate(-5px, -5px) scale(1.2);
+}
+#refresh {
+    width:40px;
+    height:auto;
+    filter:none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+#camera {
+    width:60px;
+    height:auto;
+    filter:none;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
+#camera:hover , #refresh:hover {
+    filter: drop-shadow(2px 2px #21363a90);
+    transform: translate(-5px, -5px) scale(1.2);
+}
 
 /*profile image caption*/
 .caption{
@@ -297,6 +324,7 @@ img:hover{
 
 .heart:hover, .info:hover {
     transform: scale(1.3);
+    filter: drop-shadow(2px 2px #21363a90);
 }
 
 
@@ -365,7 +393,7 @@ img:hover{
         'heads';
     }
 
-    .categories {
+    .categories, .categories2 {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -377,6 +405,15 @@ img:hover{
     #reject {
         display:none;
     }
+}
+
+@media only screen and (max-width: 800px) {
+
+.headshots img{
+    width:80px;
+    height:auto;
+
+}
 }
 
 

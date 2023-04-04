@@ -1,19 +1,17 @@
-
 body{
   font-family: "t26-carbon", monospace;
   background-image: url('homeimgs/textureBg.png');
 }
 
-
 .content{
-    padding-top: 70px;
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+  padding-top: 70px;
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 p{
@@ -24,9 +22,29 @@ p{
 
 .backgroundIMG {
   width: 350px;
-  
 }
 
+.item1 { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#titleText{
+  position: absolute;
+  z-index: 2;
+  font-size: 25pt;
+}
+
+.banner{
+  width:500px;
+  height:auto;
+  position: relative;
+
+}
 
  /*dropdown menu button*/
  .dropbtn {
@@ -34,6 +52,7 @@ p{
   cursor: pointer;
   width:50px;
   padding: 20px;
+
 }
 
 .icons{
@@ -53,7 +72,7 @@ p{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #608a7f;
+  /*background-color: #608a7f;*/
   min-width: 160px;
   overflow: auto;
   z-index: 5;
@@ -72,3 +91,16 @@ p{
 }
 
 .show {display: block;}
+
+
+
+@media only screen and (max-width: 900px) {
+
+  .banner {
+      width: 300px;
+  }
+
+  #titleText{
+      font-size: 15pt;
+  }
+}

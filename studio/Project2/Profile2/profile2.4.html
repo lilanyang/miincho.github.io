@@ -7,6 +7,9 @@
     <title>Kha 4th Photo</title>
     <link rel="stylesheet" type="text/css" href="profile2.4.css">
     <script src="profile2.4.js"></script>
+    <!--<script src="stats2.js"></script>-->
+    <script src="stats.js"></script>
+
 
     <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
 
@@ -24,19 +27,18 @@
     <div class="dropdown">
         <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
         <div id="myDropdown" class="dropdown-content">
-          <a href="../messages.html">Messages</a>
+          <a href="../messages/messages.html">Messages</a>
           <a href="../about.html">About</a>
           <a href="../select.html">Home</a>
-          <a href="#khari">Profile Info</a>
+          <a href="../profileInfo/kha.html">Info</a>
         </div>
     </div>
 
 
     
     <div class="caption">
-        <div class="captionImage">
-            <img class="frame" src="../homeimgs/iconFrame.png">
-            <img id="fourth" src="profileimgs/4thPhoto.png">
+        <div id="captionImage">
+            
         </div>
 
         
@@ -46,19 +48,19 @@
             </div>
             <div class="capRight">
                 <p>76 Likes</p> 
-                <a href="../Project2/profileInfo/khari.html"><img class="info" src="../homeimgs/iconInfo.png"> </a>
+                <a href="../profileInfo/kha.html"><img class="info" src="../homeimgs/iconInfo.png"> </a>
             </div>
         </div>
     </div>
 
 
     <div class="context">
-        <div class="contextStats">
+        <div id="contextStats">
             <p>
-                18.42% of all matches liked this photo <br> <br>
+                <!--18.42% of all matches liked this photo <br> <br>
                 64.29% identified as male <br><br>
                 21.43% identified as nonbinary, multigender <br><br>
-                14.29% identified as female <br>
+                14.29% identified as female <br>-->
             </p>
             <img src="../homeimgs/contextBg.png">
         </div>
@@ -71,15 +73,15 @@
             <img src="../homeimgs/banner.png">
         </div>
         <div class="menu">
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 1st Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 2nd Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 3rd Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 4th Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 5th Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 6th Photo</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 1st Prompt</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 2nd Prompt</div>
-            <div><img class="circle" src="../homeimgs/iconHead.png"> 3rd Prompt</div>
+            <div class="sections" id="firstPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 1st Photo</div>
+            <div class="sections" id="secondPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 2nd Photo</div>
+            <div class="sections" id="thirdPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 3rd Photo</div>
+            <div class="sections" id="fourthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 4th Photo</div>
+            <div class="sections" id="fifthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 5th Photo</div>
+            <div class="sections" id="sixthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 6th Photo</div>
+            <div class="sections" id="firstPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 1st Prompt</div>
+            <div class="sections" id="secondPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 2nd Prompt</div>
+            <div class="sections" id="thirdPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 3rd Prompt</div>
         </div>
     </div>
 
@@ -101,7 +103,14 @@
         <img class="btn" id="manBtn" src="../homeimgs/catMale.png">
         <img class="btn" id="womanBtn" src="../homeimgs/catFemale.png">
         <img class="btn" id="otherBtn" src="../homeimgs/CatNon.png">
+
     </div>
+
+    <div class="categories2">
+        <img class="Otherbtns" id="refresh" src="../homeimgs/iconRefresh.png">
+        <img class="Otherbtns" id="camera" src="../homeimgs/iconCamera.png">
+    </div>
+    
 </div>
 
 
@@ -112,10 +121,12 @@
 
 
 
-
+<!--<img id="fourth" src="profileimgs/4thPhoto.png">-->
         <!--dropdown menu function-->
 
         <script>
+
+
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
             function myFunction() {
@@ -135,6 +146,16 @@
                 }
               }
             }
+
+
+
+
+
+           /* for (var i = 1; i < profileSections.length; i++) {
+                profileSections[i].style.display = 'none';
+            }
+            });*/
+
             </script>
 
 

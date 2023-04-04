@@ -141,7 +141,7 @@ body {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #608a7f;
+    /*background-color: #608a7f;*/
     min-width: 160px;
     overflow: auto;
     z-index: 5;

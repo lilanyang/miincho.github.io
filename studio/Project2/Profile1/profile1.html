@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khari 4th Photo</title>
     <link rel="stylesheet" type="text/css" href="../Profile2/profile2.4.css">
     <script src="matchesKhari.js"></script>
     <!--<script src="stats2.js"></script>-->
     <script src="statsKhari.js"></script>
-
+    <title>Khari</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
+<script>
+      window.addEventListener('load', function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+    
+        // Trigger a click event on the button
+        filter1stPhoto.click();
+      });
+</script>
     
 </head>
 <body>
@@ -126,33 +134,7 @@
         <!--dropdown menu function-->
 
         <script>
-
-window.addEventListener('load', function() {
-        // Hide all images and stat info except for filter1stPhoto
-        if (item.Liked === '1st Photo') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
-        }
-        if (item.Image === '1stPhoto.png') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
-        }
-
-        if (item.Profile === 'Khari1') {
-          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
-            p.style.width = "210px";
-            p.style.display = "flex";
-            p.style.alignItems = "center";
-            p.style.justifyContent = "center";
-      } else {
-            p.style.display = "none";
-      }
-
-      });
-     
-
+    
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
             function myFunction() {

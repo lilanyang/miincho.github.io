@@ -48,7 +48,14 @@ fetch('statsKhari.json')
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
 
-      
+      window.addEventListener('load', function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+    
+        // Trigger a click event on the button
+        filter1stPhoto.click();
+      });
+      /*
       window.addEventListener('load', function() {
         // Hide all images and stat info except for filter1stPhoto
         if (item.Image === '1stPhoto.png') {
@@ -67,7 +74,7 @@ fetch('statsKhari.json')
             p.style.display = "none";
       }
 
-      });
+      });*/
 
 
       // Filter Profile image and stat info

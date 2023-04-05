@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Profile2/profile2.4.css">
-
     <title>Khari</title>
-
     <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+
+    <script src="matchesKhari.js"></script>
+    <script src="statsKhari.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
- <!-- 
+<!-- 
 <script>
       window.addEventListener('load', function() {
         // Get a reference to the button element
@@ -29,9 +30,7 @@
 
 
 <div class="grid">
-
 <div class="header">
-
     <div class="dropdown">
         <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
         <div id="myDropdown" class="dropdown-content">
@@ -42,14 +41,8 @@
         </div>
     </div>
 
-
-    
     <div class="caption">
-        <div id="captionImage">
-            
-        </div>
-
-        
+        <div id="captionImage"></div>
         <div class="CaptionText">
             <div class="capLeft">
                 <img class="heart" src="../homeimgs/iconHeart.png"> <p>Khari</p>
@@ -61,19 +54,12 @@
         </div>
     </div>
 
-
     <div class="context">
         <div id="contextStats">
-            <p>
-                <!--18.42% of all matches liked this photo <br> <br>
-                64.29% identified as male <br><br>
-                21.43% identified as nonbinary, multigender <br><br>
-                14.29% identified as female <br>-->
-            </p>
+            <p></p>
             <img src="../homeimgs/contextBg.png">
         </div>
     </div>
-
 
     <div class="profileMenu">
         <div class="contextBanner"> 
@@ -101,9 +87,7 @@
 
         <img id="trash" src="../homeimgs/iconTrash.png">
     </div>
-
 </div>
-
 
 <div class="content">
     <div class="categories">
@@ -113,33 +97,22 @@
         <img class="btn" id="otherBtn" src="../homeimgs/CatNon.png">
 
     </div>
-
     <div class="categories2">
         <img class="Otherbtns" id="refresh" src="../homeimgs/iconRefresh.png">
         <img class="Otherbtns" id="camera" src="../homeimgs/iconCamera.png">
     </div>
-    
 </div>
-
-
 
     <!--JSON data goes here-->
     <div id="matches" class="headshots" draggable="true">
     </div>
 
 
-
-<!--<img id="fourth" src="profileimgs/4thPhoto.png">-->
         <!--dropdown menu function-->
-
         <script>
-    
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
             function myFunction() {
               document.getElementById("myDropdown").classList.toggle("show");
             }
-            
             // Close the dropdown if the user clicks outside of it
             window.onclick = function(event) {
               if (!event.target.matches('.dropbtn')) {
@@ -153,13 +126,9 @@
                 }
               }
             }
-
-
-
             </script>
 
 
-<script src="matchesKhari.js"></script>
-<script src="statsKhari.js"></script>
+
 </body>
 </html>

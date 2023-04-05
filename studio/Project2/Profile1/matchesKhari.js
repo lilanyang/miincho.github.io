@@ -213,7 +213,7 @@ fetch('matchesKhari.json')
       // Trigger a click event on the button
       try {
         filter1stPhoto.click();
-        console.log('Button clicked!');
+        console.log('Button clicked');
       } catch (error) {
         console.error(error);
       }
@@ -221,15 +221,12 @@ fetch('matchesKhari.json')
 
 
    /*window.addEventListener('load', function() {
-      // Hide all images and stat info except for filter1stPhoto
       if (item.Liked === '1st Photo') {
         img.style.display = "block";
       } else {
         img.style.display = "none";
       }
     });*/
-
-
 
 
     // Filter photos

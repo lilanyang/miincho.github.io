@@ -12,20 +12,22 @@ fetch('statsKhari.json')
       const p = document.createElement('p');
       const img = document.createElement('img');
 
+
+      /*
    //load one section at first
     window.addEventListener('load', function() {
     // Get all the profile sections
     //var profileSections = document.querySelectorAll('captionImage');
 
     // Hide all profile sections except the first one
-    if (item.Profile != 'Kha1') {
+    if (item.Profile != 'Khari1') {
      img.style.display = "block";
 
     } else {
         img.style.display = "none";
     }
 });
-
+*/
 
       // Set the src attribute for the image
       img.src = "profileimgs/" + item.Image;
@@ -47,14 +49,14 @@ fetch('statsKhari.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
-
+/*
       window.addEventListener('load', function() {
         // Get a reference to the button element
         var filter1stPhoto = document.querySelector('#firstPhoto');
     
         // Trigger a click event on the button
         filter1stPhoto.click();
-      });
+      });*/
       
       /*
       window.addEventListener('load', function() {

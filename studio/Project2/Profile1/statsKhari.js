@@ -79,6 +79,8 @@ fetch('statsKhari.json')
 
       });*/
 
+
+//window load PLEASE WORKW[PLEASEWORK]
       function clickFirstPhotoButton() {
         var filter1stPhoto = document.querySelector('#firstPhoto');
         

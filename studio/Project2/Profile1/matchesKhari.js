@@ -33,7 +33,7 @@ fetch('matchesKhari.json')
     const img = document.createElement('img');
 
 
-    // Match and reject drag drop
+    // Match and reject drag drop // disable on mobile screen size
     if ($(window).width() > 600) {
       $("#matches img").draggable();
     }
@@ -125,7 +125,7 @@ fetch('matchesKhari.json')
     const filterWoman = document.querySelector('#womanBtn');
     const filterOther = document.querySelector('#otherBtn');
 
-          //lower opacity on click
+          //lower button opacity on click
           let prevBtn = allBtn; 
 
           allBtn.addEventListener("click", () => {

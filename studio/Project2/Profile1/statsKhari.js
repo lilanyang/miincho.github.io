@@ -79,6 +79,26 @@ fetch('statsKhari.json')
 
       });*/
 
+      function clickFirstPhotoButton() {
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        clickFirstPhotoButton();
+      });
+  
+      window.addEventListener('load', function() {
+        clickFirstPhotoButton();
+      });
+      
+      
 
       // Filter Profile image and stat info
       filter1stPhoto.addEventListener('click', function() {

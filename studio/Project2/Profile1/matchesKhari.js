@@ -207,7 +207,7 @@ fetch('matchesKhari.json')
 
 
 
-
+/*
     function clickFirstPhotoButton() {
       var filter1stPhoto = document.querySelector('#firstPhoto');
       
@@ -226,7 +226,7 @@ fetch('matchesKhari.json')
     window.addEventListener('load', function() {
       clickFirstPhotoButton();
 
-    });
+    });*/
 
     /*
     document.addEventListener("DOMContentLoaded", function() {
@@ -250,6 +250,11 @@ fetch('matchesKhari.json')
         img.style.display = "none";
       }
     });*/
+
+
+
+    
+
 
 
     // Filter photos
@@ -327,6 +332,7 @@ fetch('matchesKhari.json')
     }); 
 
     matches.appendChild(div);
+
   });
 })
 .catch(error => console.error(error));

@@ -42,7 +42,7 @@ fetch('matchesKhari.json')
       if ($(window).width() <= 600) {
         $("#matches img").draggable("disable");
       } else {
-        $("#matches img").draggable("enable");
+        $("#matches img").draggable();
       }
     });
     

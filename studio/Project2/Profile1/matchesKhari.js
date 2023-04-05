@@ -211,7 +211,12 @@ fetch('matchesKhari.json')
       var filter1stPhoto = document.querySelector('#firstPhoto');
   
       // Trigger a click event on the button
-      filter1stPhoto.click();
+      try {
+        filter1stPhoto.click();
+        console.log('Button clicked!');
+      } catch (error) {
+        console.error(error);
+      }
     });
 
 

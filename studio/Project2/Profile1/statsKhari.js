@@ -80,8 +80,8 @@ fetch('statsKhari.json')
       });*/
 
 
-//window load PLEASE WORKW[PLEASEWORK]
-      function clickFirstPhotoButton() {
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get a reference to the button element
         var filter1stPhoto = document.querySelector('#firstPhoto');
         
         // Trigger a click event on the button
@@ -91,13 +91,19 @@ fetch('statsKhari.json')
         } catch (error) {
           console.error(error);
         }
-      }
-      document.addEventListener("DOMContentLoaded", function() {
-        clickFirstPhotoButton();
       });
-  
-      window.addEventListener('load', function() {
-        clickFirstPhotoButton();
+      
+      window.addEventListener("load", function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
+        }
       });
       
       

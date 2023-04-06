@@ -49,33 +49,32 @@ fetch('statsYu.json')
 
 
       
-      window.addEventListener('load', function() {
-        // Hide all images and stat info except for filter1stPhoto
-        if (item.Image === '1stPhoto.png') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
         }
-
-        if (item.Profile === 'Yu1') {
-          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
-            p.style.width = "210px";
-            p.style.display = "flex";
-            p.style.alignItems = "center";
-            p.style.justifyContent = "center";
-      } else {
-            p.style.display = "none";
-      }
-        /*filter2ndPhoto.style.display = 'none';
-        filter3rdPhoto.style.display = 'none';
-        filter4thPhoto.style.display = 'none';
-        filter5thPhoto.style.display = 'none';
-        filter6thPhoto.style.display = 'none';
-        filter1stPrompt.style.display = 'none';
-        filter2ndPrompt.style.display = 'none';
-        filter3rdPrompt.style.display = 'none';
-      */
       });
+      
+      window.addEventListener("load", function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
+        }
+      });
+  
 
 
       // Filter Profile image and stat info

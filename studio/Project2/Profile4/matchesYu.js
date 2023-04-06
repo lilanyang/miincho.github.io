@@ -33,23 +33,25 @@ fetch('matchesYu.json')
       const img = document.createElement('img');
 
 
-      // Match and reject drag drop
+    // Match and reject drag drop // disable on mobile screen size
+    if ($(window).width() > 600) {
       $("#matches img").draggable();
-      $("#reject").droppable({
-        drop: function(event, ui) {
-          ui.draggable.remove();
-          $("#matches p").css("display", "none");
-          
-        }
-      });
-
-      /*// Drop event listener
-      $("#reject").droppable({
-        accept: "#matches img",
-        drop: function(event, ui) {
-          ui.draggable.addClass("rejected");
-        }
-      });*/
+    }
+    
+    $(window).on('resize', function() {
+      if ($(window).width() <= 600) {
+        $("#matches img").draggable("disable");
+      } else {
+        $("#matches img").draggable();
+      }
+    });
+    
+    $("#reject").droppable({
+      drop: function(event, ui) {
+        ui.draggable.remove();
+        $("#matches p").css("display", "none");
+      }
+    });
 
 
       // Text appear on hover
@@ -172,25 +174,32 @@ fetch('matchesYu.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
-      window.addEventListener('load', function() {
-        // Hide all images and stat info except for filter1stPhoto
-        if (item.Liked === '1st Photo') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
         }
-
-
-        /*filter2ndPhoto.style.display = 'none';
-        filter3rdPhoto.style.display = 'none';
-        filter4thPhoto.style.display = 'none';
-        filter5thPhoto.style.display = 'none';
-        filter6thPhoto.style.display = 'none';
-        filter1stPrompt.style.display = 'none';
-        filter2ndPrompt.style.display = 'none';
-        filter3rdPrompt.style.display = 'none';
-      */
       });
+      
+      window.addEventListener("load", function() {
+        // Get a reference to the button element
+        var filter1stPhoto = document.querySelector('#firstPhoto');
+        
+        // Trigger a click event on the button
+        try {
+          filter1stPhoto.click();
+          console.log('Button clicked');
+        } catch (error) {
+          console.error(error);
+        }
+      });
+  
 
 
       // Filter photos

@@ -174,31 +174,12 @@ fetch('matchesYu.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
-      document.addEventListener("DOMContentLoaded", function() {
-        // Get a reference to the button element
-        var filter1stPhoto = document.querySelector('#firstPhoto');
-        
-        // Trigger a click event on the button
-        try {
-          filter1stPhoto.click();
-          console.log('Button clicked');
-        } catch (error) {
-          console.error(error);
-        }
-      });
-      
-      window.addEventListener("load", function() {
-        // Get a reference to the button element
-        var filter1stPhoto = document.querySelector('#firstPhoto');
-        
-        // Trigger a click event on the button
-        try {
-          filter1stPhoto.click();
-          console.log('Button clicked');
-        } catch (error) {
-          console.error(error);
-        }
-      });
+      if (item.Liked === '1st Photo') {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+  
   
 
 

@@ -30,23 +30,10 @@ fetch('stats.json')
       // Set the src attribute for the image
       img.src = "profileimgs/" + item.Image;
       img.style.display = "none";
+      p.style.display = "none";
 
 
-        if (item.Image === '1stPhoto.png') {
-          img.style.display = "block";
-        } else {
-          img.style.display = "none";
-        }
 
-        if (item.Profile === 'Khari1') {
-          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
-            p.style.width = "210px";
-            p.style.display = "flex";
-            p.style.alignItems = "center";
-            p.style.justifyContent = "center";
-      } else {
-            p.style.display = "none";
-      }
 
 
 
@@ -97,6 +84,24 @@ fetch('stats.json')
       });
   
 */
+
+      if (item.Image === '1stPhoto.png') {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+
+      if (item.Profile === 'Kha1') {
+        p.style.display = "block";
+        p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
+          p.style.width = "210px";
+          p.style.display = "flex";
+          p.style.alignItems = "center";
+          p.style.justifyContent = "center";
+
+      } else {
+          p.style.display = "none";
+      }
 
       // Filter Profile image and stat info
       filter1stPhoto.addEventListener('click', function() {

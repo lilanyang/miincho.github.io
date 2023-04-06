@@ -85,6 +85,7 @@ fetch('profile2.4.json')
 
       // Set the src attribute for the image
       img.src = "imgs/" + item.Headshot;
+      img.style.display = "none";
 
       // Add the div and p elements to the list item
       div.appendChild(img);
@@ -178,6 +179,7 @@ fetch('profile2.4.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
+      /*
       document.addEventListener("DOMContentLoaded", function() {
         // Get a reference to the button element
         var filter1stPhoto = document.querySelector('#firstPhoto');
@@ -203,8 +205,14 @@ fetch('profile2.4.json')
           console.error(error);
         }
       });
-  
+  */
+      if (item.Liked === '1st Photo') {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
 
+      
       // Filter photos
       filter1stPhoto.addEventListener('click', function() {
         if (item.Liked === '1st Photo') {

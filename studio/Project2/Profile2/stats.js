@@ -29,6 +29,27 @@ fetch('stats.json')
 
       // Set the src attribute for the image
       img.src = "profileimgs/" + item.Image;
+      img.style.display = "none";
+
+
+        if (item.Image === '1stPhoto.png') {
+          img.style.display = "block";
+        } else {
+          img.style.display = "none";
+        }
+
+        if (item.Profile === 'Khari1') {
+          p.innerHTML = item.StatAll + '<br />' + '<br />' + item.StatMale + '<br />' + '<br />' + item.StatFemale + '<br />' + '<br />' + item.StatNon;
+            p.style.width = "210px";
+            p.style.display = "flex";
+            p.style.alignItems = "center";
+            p.style.justifyContent = "center";
+      } else {
+            p.style.display = "none";
+      }
+
+
+
 
       // Add the div and p elements to the list item
       div.appendChild(img);
@@ -47,7 +68,7 @@ fetch('stats.json')
       const filter2ndPrompt = document.querySelector('#secondPrompt');
       const filter3rdPrompt = document.querySelector('#thirdPrompt');
 
-
+/*
       
       document.addEventListener("DOMContentLoaded", function() {
         // Get a reference to the button element
@@ -75,7 +96,7 @@ fetch('stats.json')
         }
       });
   
-
+*/
 
       // Filter Profile image and stat info
       filter1stPhoto.addEventListener('click', function() {

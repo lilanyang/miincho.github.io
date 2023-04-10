@@ -87,6 +87,27 @@ fetch('profile2.4.json')
       img.src = "imgs/" + item.Headshot;
       img.style.display = "none";
 
+
+         // mobile stuff
+    img.addEventListener("touchstart",() => {
+      p.innerHTML = item.Profile;
+      p.style.display = "block";
+      p.style.backgroundColor = '#d9c58b';
+      p.style.color = 'black';
+      p.style.position = 'absolute';
+      p.style.zIndex = '500';
+      p.style.padding = '10px';
+      p.style.maxWidth = '120px';
+      p.style.marginTop = '40px';
+      p.style.marginLeft = '15px';
+    });
+
+    // Hide text when touch ends
+    img.addEventListener("touchend", () => {
+      p.style.display = "none";
+    });
+
+    
       // Add the div and p elements to the list item
       div.appendChild(img);
       div.appendChild(p);

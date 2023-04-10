@@ -80,20 +80,6 @@ fetch('matchesKhari.json')
       p.style.marginLeft = '15px';
     });
     
-    //mobile version
-    img.addEventListener("touchstart", () => {
-      p.innerHTML = item.Name + '<br />' + item.Age + '<br />' + item.Gender + '<br />' + item.Comments;
-      p.style.display = "block";
-      p.style.backgroundColor = '#d9c58b';
-      p.style.color = 'black';
-      p.style.position = 'absolute';
-      p.style.zIndex = '500';
-      p.style.padding = '10px';
-      p.style.maxWidth = '120px';
-      p.style.marginTop = '40px';
-      p.style.marginLeft = '15px';
-    });
-
     
     // Hide text when mouse leaves the image
     img.addEventListener("mouseleave", () => {
@@ -106,10 +92,24 @@ fetch('matchesKhari.json')
       p.style.display = "block"
     });
 
-    //Profile info appear on click mobile version
-    img.addEventListener("dblclick", () => {
-      p.textContent = item.Profile;
+
+    // mobile stuff
+    img.addEventListener("touchstart",() => {
+      p.innerHTML = item.Profile;
       p.style.display = "block";
+      p.style.backgroundColor = '#d9c58b';
+      p.style.color = 'black';
+      p.style.position = 'absolute';
+      p.style.zIndex = '500';
+      p.style.padding = '10px';
+      p.style.maxWidth = '120px';
+      p.style.marginTop = '40px';
+      p.style.marginLeft = '15px';
+    });
+
+    // Hide text when touch ends
+    img.addEventListener("touchend", () => {
+      p.style.display = "none";
     });
 
     // Set the src attribute for the image
@@ -337,3 +337,4 @@ fetch('matchesKhari.json')
   });
 })
 .catch(error => console.error(error));
+

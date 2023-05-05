@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <title>About</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div id="ticket">
+        <div class="grid-container">
+            <div class="item1">
+                <h2 class="title1">
+                    NYC SAT <br>
+                    Admission Ticket
+                </h2>
+                <h2 class="title2">
+                    2012
+                </h2>
+            </div>
+            <div class="item2">
+                <p class="test">
+                    <span class="bold">Test Information</span> <br><br>
+                    The most recent school level results for New York
+                    City on the SAT. Results are available at the school
+                    level for the graduating seniors of 2012. Records contain 
+                    2012 College-bound seniors mean SAT scores taken during 
+                    SY 2012. 
+                </p>
+            </div>
+            <div class="item3">
+                <p class="print">
+                    <span class="bold">PRINT AND BRING THIS TICKET TO TEST CENTER</span>
+                </p>
+            </div>  
+            <div class="item4">
+                <p class="racialDemo">
+                    <span class="bold">Racial Demographic</span> <br><br>
+                    The SAT test is often seen as a measure of a student's
+                    academic abilities, but it's also influenced by socioeconomic 
+                    status. Students from higher-income families tend to perform 
+                    better on standardized tests, while those from lower-income 
+                    backgrounds tend to score lower.
+                </p>
+            </div>
+            <div class="item5">
+                <a href="index.html">
+                    <p class="begin">
+                        <br><br><br>
+                        <span class="bold">BEGIN TEST -></span>
+                    </p>
+                </a>
+            </div>
+          </div>
+    </div>
+
+    <img id="calc" src="imgs/calculator.png">
+    <img id="card" src="imgs/card.png">
+    <img id="eraser" src="imgs/eraser.png">
+
+    <!--
+    <img id="pencil" src="imgs/pencil.png">
+    <img id="pencil2" src="imgs/pencil.png"> -->
+
+    <img id="mask" src="imgs/mask.png">
+
+    <script>
+$(document).ready(function() {
+  $("#calc").draggable({ scroll: false });
+  $("#card").draggable({ scroll: false });
+  $("#eraser").draggable({ scroll: false });
+  $("#pencil").draggable({ scroll: false });
+  $("#pencil2").draggable({ scroll: false });
+  $("#mask").draggable({ scroll: false });
+});
+
+
+
+
+        const container = document.querySelector('.grid-container');
+
+        // random position
+        const images = document.querySelectorAll('img');
+        images.forEach((img) => {
+        img.style.top = `${Math.random() * container.offsetHeight}px`;
+        img.style.left = `${Math.random() * container.offsetWidth}px`;
+        });
+    </script>
+
+
+
+</body>
+</html>

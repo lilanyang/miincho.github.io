@@ -1,0 +1,33 @@
+body{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: left;
+    padding-top: 85px;
+    font-weight: 500;
+}
+
+.test{
+    margin-bottom: 10px;
+    background-color:white ;
+    color: #039B75;
+    border: 2px solid #039B75; /* Set a border */
+    /*border-radius: 10px; /* Set the border radius */
+}
+
+.test p {
+    margin: 20px;
+}
+
+#title{
+    color: white ;
+    background-color:  #039B75;
+    padding: 1px;
+}
+
+#modules{
+    margin: 0 auto;
+    padding-left: 30%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+}
+

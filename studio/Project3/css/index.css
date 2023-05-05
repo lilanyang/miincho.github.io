@@ -1,0 +1,88 @@
+body{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+img{
+  width: 50px;
+  margin:0;
+  float:left;
+  padding-left: 3%;
+}
+
+#flex{
+  display:flex;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+}
+
+
+#title{
+    color: white ;
+    background-color:  #039B75;
+    padding: 3%;
+    font-size: 30px;
+}
+
+  #container1{
+    
+    margin-left:15%;
+    margin-right:25px;
+    background-color:white ;
+    color: #039B75;
+    border: 3px solid #039B75; /* Set a border */
+    /*border-radius: 10px; /* Set the border radius */
+    min-width: 630px;
+    max-width:630px;
+    transform: rotate(2deg);
+      
+  }
+
+
+  /**/
+
+  #title2{
+    color: white ;
+    background-color:  #039B75;
+    padding: 3%;
+    font-size: 30px;
+}
+
+  #container2{
+    
+    margin-left:15%;
+    margin-right:25px;
+    background-color:white ;
+    color: #039B75;
+    border: 3px solid #039B75; /* Set a border */
+    /*border-radius: 10px; /* Set the border radius */
+    min-width: 630px;
+    max-width:630px;
+    transform: rotate(-1deg);
+      
+  }
+
+  /**/
+
+  #title3{
+    color: white ;
+    background-color:  #039B75;
+    padding: 3%;
+    font-size: 30px;
+}
+
+  #container3{
+    
+    margin-left:15%;
+    margin-right:25px;
+    background-color:white ;
+    color: #039B75;
+    border: 3px solid #039B75; /* Set a border */
+    /*border-radius: 10px; /* Set the border radius */
+    min-width: 630px;
+    max-width:630px;
+    transform: rotate(1deg);
+      
+  }

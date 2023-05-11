@@ -34,7 +34,7 @@ let sketch1 = function(p) {
     for (let i = 0; i < itemNum; i++) {
       reading[i] = data[i].sat_critical_reading_avg_score;
       testTakers[i] = data[i].num_of_sat_test_takers;
-      textSizeValues[i] = p.map(testTakers[i], 0, 500, 10, 80);
+      textSizeValues[i] = p.map(testTakers[i], 0, 590, 10, 80);
     }
 
   // initialize targetNums and currentNums arrays

@@ -74,15 +74,15 @@ function showResults(){
   // show the score based on the number of correct answers
   let score = 0;
   if (numCorrect === 5) {
-    score = 600;
+    score = 800;
   } else if (numCorrect === 4) {
-    score = 450;
+    score = 650;
   } else if (numCorrect === 3) {
-    score = 300;
+    score = 400;
   } else if (numCorrect === 2) {
-    score = 150;
+    score = 350;
   } else if (numCorrect === 1) {
-    score = 50;
+    score = 200;
   }
 
   resultsContainer.innerHTML = `You scored ${score} on the Math section.`;

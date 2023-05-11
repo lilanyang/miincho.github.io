@@ -3,7 +3,7 @@
   let data, url;
   let itemNum = 160;
   let testTakers = [];
-  let writing = [];
+  let math = [];
   let targetNums = [];
   let currentNums = [];
   let textSizeValues = [];
@@ -32,14 +32,14 @@
 
     //itemNum = Object.keys(data).length;
     for (let i = 0; i < itemNum; i++) {
-      writing[i] = data[i].sat_writing_avg_score;
+      math[i] = data[i].sat_math_avg_score;
       testTakers[i] = data[i].num_of_sat_test_takers;
-      textSizeValues[i] = map(testTakers[i], 0, 500, 10, 80);
+      textSizeValues[i] = map(testTakers[i], 0, 590, 10, 80);
     }
 
   // initialize targetNums and currentNums arrays
-  for (let i = 0; i < writing.length; i++) {
-    targetNums[i] = writing[i];
+  for (let i = 0; i < math.length; i++) {
+    targetNums[i] = math[i];
     currentNums[i] = random(100, 999);
   }
 
@@ -54,7 +54,7 @@
 
   mousePressed = function() {
     // check if the mouse is over a score
-    for (let i = 0; i < writing.length; i++) {
+    for (let i = 0; i < math.length; i++) {
       let x = 50;
       let y = 50 + i * 30;
       if (mouseX > x && mouseX < x + 50 && mouseY > y && mouseY < y + 30) {
@@ -74,7 +74,7 @@
     textAlign(CENTER, CENTER);
     let x = 50;
     let y = 50;
-    for (let i = 0; i < writing.length; i++) {
+    for (let i = 0; i < math.length; i++) {
       textSize(textSizeValues[i]); 
 
     // if the mouse is hovering over the current number and change the background color
@@ -104,7 +104,7 @@
       let black = data[selectedScoreIndex].black_per;
       let hispanic = data[selectedScoreIndex].hispanic_per;
       let white = data[selectedScoreIndex].white_per;
-      let writingScore = data[selectedScoreIndex].sat_writing_avg_score;
+      let mathScore = data[selectedScoreIndex].sat_math_avg_score;
     
       let highestPercentage = Math.max(asian, black, hispanic, white);
       let popupUrl;
@@ -116,7 +116,7 @@
       }
     
       let popupText =
-        `You chose [Writing]. The average score for this section at this school is [${writingScore}]. <br><br>
+        `You chose [Math]. The average score for this section at this school is [${mathScore}]. <br><br>
         [${asian}]% Asian<br>
         [${black}]% Black<br>
         [${hispanic}]% Hispanic<br>
@@ -188,7 +188,7 @@
   };
 
   function updateNum() {
-    for (let i = 0; i < writing.length; i++) {
+    for (let i = 0; i < math.length; i++) {
       // if the mouse is hovering over the current number, set the current number to the target number
       if (mouseX > 50 && mouseX < 100 && mouseY > 50 + i * 30 && mouseY < 80 + i * 30) {
         currentNums[i] = targetNums[i];

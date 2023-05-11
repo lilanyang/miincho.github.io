@@ -33,7 +33,7 @@ function setup() {
   for (let i = 0; i < itemNum; i++) {
     math[i] = data[i].sat_math_avg_score;
     testTakers[i] = data[i].num_of_sat_test_takers;
-    textSizeValues[i] = map(testTakers[i], 0, 500, 10, 80);
+    textSizeValues[i] = map(testTakers[i], 0, 590, 10, 80);
   }
 
   // initialize targetNums and currentNums arrays

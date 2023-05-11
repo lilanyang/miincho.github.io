@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>WRITING</title>
+    <link rel="stylesheet" href="css/newpopupinversed.css">
+</head>
+<body>
+    
+
+
+
+    <div class="grid">
+        <div class="squares1">
+            <img src="imgs/square2.png">
+        </div>
+        <div class="title">
+            <p>
+                WRITING <br>
+                Time - <span id="timer">10:00</span> <br>
+                5 Questions
+            </p>
+        </div>
+        <div class="squares2">
+            <img src="imgs/square2.png">
+        </div>
+
+
+        <div class="line">
+            <img  id="separate" src="imgs/line.png">
+        </div>
+
+
+
+        <div id="directions">
+            <div class="boxborder">
+                <div id="green">
+                    <p>
+                        Directions <br>
+                    </p>
+                </div>
+                    <p id="direct">
+                        For each question in this section, select the best answer from among the choices given and fill in the corresponding
+                        circle on the answer sheet.
+                    </p>
+            </div>
+        </div>
+
+        <div id="ready">
+            <div class="boxborder">
+                <div id="green">
+                    <p>
+                        Are you ready?
+                    </p>
+                </div>
+                    <p>
+                        <span id="yes">[Yes]</span><br>
+                        <span id="no">[Yes]</span>
+                    </p>
+            </div>
+        </div>
+    </div>
+
+
+<div id="quiz"></div>
+<button id="submit" type="submit">Submit</button>
+<div id="results"></div>
+
+<script src="js/writingpopup.js"></script>
+
+<script>
+ function getRandomPosition() {
+  var x = window.innerWidth - 50;
+  var y = window.innerHeight - 50;
+  var randomX = Math.floor(Math.random() * x);
+  var randomY = Math.floor(Math.random() * y);
+  var scrollX = window.scrollX || window.pageXOffset;
+  var scrollY = window.scrollY || window.pageYOffset;
+  return [randomX + scrollX, randomY + scrollY];
+}
+
+function createSquare() {
+  var square = document.createElement('div');
+  square.className = 'square';
+  var xy = getRandomPosition();
+  square.style.left = xy[0] + 'px';
+  square.style.top = xy[1] + 'px';
+  square.addEventListener('click', function() {
+    this.remove();
+  });
+  document.body.appendChild(square);
+}
+
+setInterval(createSquare, 900);
+</script>
+
+
+
+</body>
+</html>

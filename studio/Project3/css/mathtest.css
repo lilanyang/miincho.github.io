@@ -1,0 +1,81 @@
+body{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: left;
+    padding-top: 85px;
+    font-weight: 500;
+    color: #039B75;
+}
+
+#quiz, #submit, #results {
+    display: none;
+  }
+  
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: 'Rajdhani', sans-serif;
+	font-size: 20px;
+	background-color:white;
+	color: #039B75;
+    font-weight: 600;
+    border: 2px solid #039B75;
+	padding: 20px;
+	cursor: pointer;
+    margin-left: 30%;
+    margin-right:30%;
+    
+}
+#submit:hover{
+	opacity: 80%;
+}
+
+#quiz{
+    margin: 0 auto;
+    padding-left: 30%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+    
+}
+
+#results{
+    margin: 0 auto;
+    padding-left: 30%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+    
+}
+ /**/
+ .test{
+    margin-bottom: 10px;
+    background-color:white ;
+    color: #039B75;
+    border: 2px solid #039B75; /* Set a border */
+    /*border-radius: 10px; /* Set the border radius */
+}
+
+.test p {
+    margin: 20px;
+}
+
+#title{
+    color: white ;
+    background-color:  #039B75;
+    padding: 1px;
+}
+
+#modules{
+    margin: 0 auto;
+    padding-left: 30%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+}

@@ -70,7 +70,7 @@ let sketch2 = function(p) {
   p.draw = function() {
     p.clear();
 
-    // display all of the SAT writing scores
+    // display all of the SAT reading scores
     p.textAlign(p.CENTER, p.CENTER);
     let x = 50;
     let y = 50;
@@ -79,11 +79,11 @@ let sketch2 = function(p) {
 
     // if the mouse is hovering over the current number and change the background color
     if (p.mouseX > x && p.mouseX < x + 50 && p.mouseY > y && p.mouseY < y + 30) {
-      p.fill(255, 0, 0);
+      p.fill('white');
       // stop flickering numbers on mouse hover
       currentNums[i] = targetNums[i];
     } else {
-      p.fill('#039B75');
+      p.fill('#fc648a');
     }
     // display the current number
     p.text(p.floor(currentNums[i]), x, y);
@@ -98,68 +98,76 @@ let sketch2 = function(p) {
 
 
 
- // show the school name in a popup if a score is selected
-if (selectedScoreIndex >= 0) {
-  let writingScore = data[selectedScoreIndex].sat_writing_avg_score;
-  let schoolName = `<span style="font-weight: 700;">${data[selectedScoreIndex].school_name}</span>`;
-  let popupText = 
-    `You chose [Writing]. The average score for this section at this school is [${writingScore}]. <br>
-    Do you want to challenge this score? <br><br>
-    <button class="popup-btn-yes"> [Challenge] </button> <br>
-    <button class="popup-btn-no"> [Forfeit] </button>
-    `;
-
-   /*
-    // calculate the center coordinates of the canvas
-  let centerX = p.width / 2;
-  let centerY = p.height / 2;*/
-
-  // create a new div element for the popup
-  let popup = p.createDiv(schoolName);
-  popup.parent("#container2"); // set the parent to #container2
-  popup.style('background-color', '#fff');
-  popup.style('border', '2px solid #039B75');
-  //popup.style('text-align', 'left');
-  popup.style('padding', '10px');
-  popup.child(p.createP(popupText));
-  popup.style('position', 'absolute'); // set position to absolute
-  popup.style('left', '50%'); // center horizontally
-  popup.style('top', '50%'); // center vertically
-  popup.style('transform', 'translate(-50%, -50%)'); // center both horizontally and vertically
-
-
-
-
-  
-  // set the position of the container2 div to relative
-  let container2 = document.querySelector("#container2");
-  container2.style.position = 'relative';
-
-  let btnYes = popup.elt.querySelector('.popup-btn-yes');
-  btnYes.addEventListener('click', () => {
-    // remove the popup element from the DOM
-    popup.remove();
-  
-    // calculate the x and y position of the popup window to center it on the screen
-    const screenWidth = window.screen.availWidth;
-    const screenHeight = window.screen.availHeight;
-    const windowWidth = 800;
-    const windowHeight = 600;
-    const x = (screenWidth - windowWidth) / 2;
-    const y = (screenHeight - windowHeight) / 2;
-
-
-    // open the math test in a new popup window at the center of the screen
-    window.open('writingpopup.html', '_blank', `width=${windowWidth},height=${windowHeight},left=${x},top=${y}`);
-  }, 5000);
-
-
-  let btnNo = popup.elt.querySelector('.popup-btn-no');
-  btnNo.addEventListener('click', () => {
-    // remove the popup element from the DOM
-    popup.remove();
-  });
-}
+  if (selectedScoreIndex >= 0) {
+      let schoolName = `<span style="font-weight: 700;">${data[selectedScoreIndex].school_name}</span>`;
+      let asian = data[selectedScoreIndex].asian_per;
+      let black = data[selectedScoreIndex].black_per;
+      let hispanic = data[selectedScoreIndex].hispanic_per;
+      let white = data[selectedScoreIndex].white_per;
+      let writingScore = data[selectedScoreIndex].sat_writing_avg_score;
+    
+      let highestPercentage = Math.max(asian, black, hispanic, white);
+      let popupUrl;
+    
+      if (highestPercentage == asian || highestPercentage == white) {
+        popupUrl = 'EASYwritinginversed.html';
+      } else {
+        popupUrl = 'newpopupinversed.html';
+      }
+    
+      let popupText =
+        `You chose [Writing]. The average score for this section at this school is [${writingScore}]. <br><br>
+        [${asian}]% Asian<br>
+        [${black}]% Black<br>
+        [${hispanic}]% Hispanic<br>
+        [${white}]% White<br><br>
+        <button class="popup-btn-yes"> [Experience] </button> <br>
+        <button class="popup-btn-no"> [Leave] </button>
+        `;
+     
+      // create a new div element for the popup
+      let popup = p.createDiv(schoolName);
+      popup.parent("#container2"); // set the parent to #container1
+      popup.style('background-color', 'black');
+      popup.style('border', '2px solid #fc648a');
+      //popup.style('text-align', 'left');
+      popup.style('padding', '10px');
+      popup.child(p.createP(popupText));
+      popup.style('position', 'absolute'); // set position to absolute
+      popup.style('left', '50%'); // center horizontally
+      popup.style('top', '50%'); // center vertically
+      popup.style('transform', 'translate(-50%, -50%)'); // center both horizontally and vertically
+     
+    
+      // apply CSS style to the buttons
+      let buttons = popup.elt.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.add('my-btn-style');
+      }
+    
+      // set the position of the container1 div to relative
+      let container2 = document.querySelector("#container2");
+      container2.style.position = 'relative';
+     
+      let btnYes = popup.elt.querySelector('.popup-btn-yes');
+      btnYes.addEventListener('click', () => {
+        // remove the popup element from the DOM
+        popup.remove();
+        const screenWidth = window.screen.availWidth;
+        const screenHeight = window.screen.availHeight;
+        const windowWidth = 800;
+        const windowHeight = 600;
+        const x = (screenWidth - windowWidth) / 2;
+        const y = (screenHeight - windowHeight) / 2;
+    
+        window.open(popupUrl, '_blank', `width=${windowWidth},height=${windowHeight},left=${x},top=${y}`);
+      }, 5000);
+    
+      let btnNo = popup.elt.querySelector('.popup-btn-no');
+      btnNo.addEventListener('click', () => {
+        popup.remove();
+      });
+    }
 
     // gradually slow down the flickering numbers to the target numbers
     for (let i = 0; i < currentNums.length; i++) {
@@ -195,3 +203,5 @@ if (selectedScoreIndex >= 0) {
 
 }
 new p5(sketch2);
+
+

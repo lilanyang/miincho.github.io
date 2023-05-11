@@ -2,6 +2,7 @@ body{
     font-family: 'Rajdhani', sans-serif;
     text-align: center;
     font-weight: 500;
+    background-color: black;
 
 }
 
@@ -11,10 +12,11 @@ body{
   top:15px;
   left:15px;
   position:absolute;
+  filter: invert(1);
 }
 
 .switch:hover{
-filter: invert(1);
+filter: invert(0);
 }
 
 #overlay {
@@ -36,8 +38,8 @@ filter: invert(1);
 
 
 #title{
-    color: white ;
-    background-color:  #039B75;
+    color: black ;
+    background-color:   #fc648a;
     padding: 3%;
     font-size: 30px;
 }
@@ -45,9 +47,9 @@ filter: invert(1);
   #container1{
     
     margin-left: 50px;
-    background-color:white ;
-    color: #039B75;
-    border: 3px solid #039B75; /* Set a border */
+    background-color: black  ;
+    color:  #fc648a;
+    border: 3px solid  #fc648a; /* Set a border */
     /*border-radius: 10px; /* Set the border radius */
     min-width: 630px;
     max-width:630px;
@@ -59,8 +61,8 @@ filter: invert(1);
   /**/
 
   #title2{
-    color: white ;
-    background-color:  #039B75;
+    color: black ;
+    background-color:   #fc648a;
     padding: 3%;
     font-size: 30px;
 }
@@ -68,9 +70,9 @@ filter: invert(1);
   #container2{
     
     margin-left: 50px;
-    background-color:white ;
-    color: #039B75;
-    border: 3px solid #039B75; /* Set a border */
+    background-color: black  ;
+    color:  #fc648a;
+    border: 3px solid  #fc648a; /* Set a border */
     /*border-radius: 10px; /* Set the border radius */
     min-width: 630px;
     max-width:630px;
@@ -81,8 +83,8 @@ filter: invert(1);
   /**/
 
   #title3{
-    color: white ;
-    background-color:  #039B75;
+    color:  black  ;
+    background-color:  #fc648a;
     padding: 3%;
     font-size: 30px;
 }
@@ -90,9 +92,9 @@ filter: invert(1);
   #container3{
     
     margin-left: 50px;
-    background-color:white ;
-    color: #039B75;
-    border: 3px solid #039B75; /* Set a border */
+    background-color: black  ;
+    color:  #fc648a;
+    border: 3px solid  #fc648a; /* Set a border */
     /*border-radius: 10px; /* Set the border radius */
     min-width: 630px;
     max-width:630px;
@@ -104,20 +106,17 @@ filter: invert(1);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    color: #039B75;
+    color: #FC648A;
     padding: 5px;
     margin-bottom: 5px;
-    background-color:white;
-    border: solid #039B75 1.5px;
+    background-color: #000000;
+    border: solid #FC648A 2px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     text-align: center;
     font-family: 'Rajdhani', sans-serif;
-    font-weight: 500;
   }
-
-
 
   @media only screen and (max-width: 900px) {
     #flex{

@@ -1,0 +1,133 @@
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+/*quiz stuff*/
+
+#quiz, #submit, #results {
+    display: none;
+    color: #039B75;
+  }
+
+  .question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: 'Rajdhani', sans-serif;
+	font-size: 20px;
+	background-color:white;
+	color: #039B75;
+    font-weight: 600;
+    border: 2px solid #039B75;
+	padding: 20px;
+	cursor: pointer;
+    margin-left: 30%;
+    margin-right:30%;
+}
+#submit:hover{
+	opacity: 80%;
+}
+
+#quiz{
+    margin: 0 auto;
+    padding-left: 30%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+    
+}
+
+#results{
+    margin: 0 auto;
+    padding-left: 35%;
+    padding-right:30%;
+    max-width: 350px;
+    min-width: 250px;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+img{
+    padding-top: 25%;
+    width:200px;
+}
+
+#separate {
+    padding: 0%;
+    width: 800px;
+}
+
+/*other stuff*/
+.squares1 { grid-area: squares1; }
+.title { grid-area: title; }
+.squares2 { grid-area: squares2; }
+.line { grid-area: line; }
+#directions { grid-area: directions;}
+#ready { grid-area: ready; }
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    'squares1 title squares2'
+    'line line line'
+    'directions directions directions'
+    'ready ready ready ';
+  gap: 10px;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+#green{
+    font-family: 'Rajdhani', sans-serif;
+	font-size: 23px;
+	background-color:#039B75;
+	color: #fff;
+	border: 0px;
+	/*border-radius: 3px;*/
+	padding: 1%;
+	cursor: pointer;
+    font-weight: 550;
+
+}
+
+#direct{
+    color: #039B75;
+    text-align: left;
+    margin:3%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#yes,#no{
+    color: #039B75;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.title p{
+    color: #039B75;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.boxborder{
+    border: 2px solid #039B75; /* Set a border */
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+    font-weight: 500;
+    
+}

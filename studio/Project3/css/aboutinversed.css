@@ -1,0 +1,128 @@
+body{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    padding-top:50px;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: #fc648a;
+}
+
+.item1 { grid-area: title; }
+.item2 { 
+    grid-area: testInfo;   
+    border: 3px solid #fc648a;
+}
+.item3 { 
+    grid-area: print;
+    border: 3px solid #fc648a;
+}
+.item4 { 
+    grid-area: racialDemo; 
+    border: 3px solid #fc648a;
+}
+.item5 { 
+    grid-area: begin; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'testInfo print'
+    'racialDemo racialDemo'
+    'begin begin';
+  gap: 10px;
+  padding: 30px;
+  margin:5%;
+  max-width:700px;
+  min-width: 700px;
+  margin:auto;
+  border: 3px solid #fc648a;
+  color:#fc648a;
+  position: relative;
+  transform: rotate(2deg);
+}
+
+.grid-container > div {
+  /*background-color: rgba(47, 133, 73, 0.8);*/
+  padding: 20px ;
+  font-size: 20px;
+
+}
+
+.title1{
+    float: left;
+    text-align: left;
+
+}
+
+.title2{
+    float: right;
+}
+
+.test{
+    text-align: left;
+}
+
+.print{
+    text-align: left;
+}
+
+.racialDemo{
+    text-align: left;
+}
+
+.begin{
+    margin: 0;
+}
+
+img{
+    position: absolute;
+    filter: drop-shadow(5px 10px rgba(52, 52, 52, 0.5)) ;
+}
+
+#calc{
+    width:300px;
+    transform: rotate(-15deg);
+}
+
+#card{
+    width:300px;
+    transform: rotate(-160deg);
+}
+
+#eraser{
+    width:200px;
+}
+
+#pencil{
+    width:30px;
+    transform: rotate(-30deg);
+}
+
+#pencil2{
+    width:30px;
+    transform: rotate(-20deg);
+}
+
+#mask{
+    width:700px;
+}
+
+.bold{
+    font-weight: 1000;
+    font-size: 20pt;
+}
+
+
+
+img{
+    filter: invert(1);
+}

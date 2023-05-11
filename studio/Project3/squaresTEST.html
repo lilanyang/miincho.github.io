@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .square {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          background-color: #fc648a;
+          cursor: pointer;
+          border: 2px solid black;
+        }
+      </style>
+
+<div id="container"></div>
+<script>
+function getRandomPosition() {
+  var x = window.innerWidth - 50;
+  var y = window.innerHeight - 50;
+  var randomX = Math.floor(Math.random() * x);
+  var randomY = Math.floor(Math.random() * y);
+  var scrollX = window.scrollX || window.pageXOffset;
+  var scrollY = window.scrollY || window.pageYOffset;
+  return [randomX + scrollX, randomY + scrollY];
+}
+
+function createSquare() {
+  var square = document.createElement('div');
+  square.className = 'square';
+  var xy = getRandomPosition();
+  square.style.left = xy[0] + 'px';
+  square.style.top = xy[1] + 'px';
+  square.addEventListener('click', function() {
+    this.remove();
+  });
+  document.body.appendChild(square);
+}
+
+setInterval(createSquare, 100);
+</script>
+
+
+
+
+</body>
+</html>

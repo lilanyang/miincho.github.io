@@ -60,9 +60,10 @@
       if (mouseX > x && mouseX < x + 50 && mouseY > y && mouseY < y + 30) {
         selectedScoreIndex = i; // save the index of the selected score
         break;
-      }
     }
+  }
   };
+
 
 
   
@@ -95,7 +96,7 @@
       x += 100;
     }
   }
-
+  
 
 
   if (selectedScoreIndex >= 0) {

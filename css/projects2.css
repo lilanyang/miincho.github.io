@@ -1,0 +1,184 @@
+body{
+    /*background-color: black;*/
+    font-family: 'Rajdhani', sans-serif;
+    background-image: url("../imgs/starsbackground.gif");
+    background-size: auto;
+    background-repeat: repeat;
+    margin:0;
+    padding:0;
+    cursor: url('../imgs/ballcursor3.png'), auto;
+}
+
+a {
+  cursor: url('../imgs/ballcursor3.png') 10 10, auto !important;
+}
+
+.nav img {
+  max-width: 120px;
+  min-width: 120px;
+  height:auto;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+}
+
+  .nav{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding-bottom: 20px; /* Add desired padding at the bottom */
+  }
+
+  #navProjects{
+    filter: invert(1);
+  }
+
+/*
+  .thumbnails{
+    grid-area:thumb;
+  }
+
+  .desc{
+    grid-area: desc;
+    float:right;
+  }
+
+.screenshots{
+  position:absolute;
+  width:55%;
+  height:auto;
+}
+
+.IMGframe{
+  position:absolute;
+  width:55%;
+  height:auto;
+}
+
+.longframe{
+  width:80%;
+  height: auto;
+}
+
+.desc p{
+  color: white;
+}
+
+.desc .thumbnails {
+  position:relative;
+}
+
+.project .desc{
+  width: 50%; 
+}
+
+.project{
+  display: grid;
+  grid-template-areas: 
+  'thumb desc';
+}
+
+*/
+
+/*FIRST PROJECT*/
+.screenshots, .video,
+.IMGframe{
+  width:85%;
+  height:auto;
+  position: absolute;
+}
+
+.screenshots{
+  filter: grayscale(80%);
+}
+
+.thumbnails:hover  .screenshots{
+  filter: none;
+}
+
+.longframe,
+.desc p{
+  width:65%;
+  height:auto;
+  position: absolute;
+}
+
+.thumbnails{
+  grid-area:thumbnail;
+}
+
+.desc{
+  grid-area:desc;
+}
+
+.desc p{
+  color:white;
+  padding: 10%;
+  max-width: 40%;
+  font-size: 20px;
+}
+
+.project1,
+.projectone {
+  position: relative;
+  padding: 10%;
+}
+
+.project1{
+  grid-area: left;
+}
+
+.projectone{
+  grid-area: right;
+}
+
+.bruh {
+  display: grid;
+  grid-template-areas: 'left right' ;
+  padding-bottom: 30%;
+}
+
+
+/*video stuff*/
+.video {
+  position: absolute;
+  display: none;
+}
+
+
+
+/*spans*/
+
+span{
+  font-weight: 600;
+  font-size: 25px;
+}
+
+
+/*MEDIA QUEYEYEYEYYEYEYRERERER*/
+
+@media only screen and (max-width: 600px) {
+  .bruh {
+    display: grid;
+    grid-template-areas: 
+    'left' 
+    'right' ;
+    padding-bottom: 70%;
+  }
+
+  .projectone{
+    padding-top: 50%;
+  }
+
+  .longframe{
+    width: 85%;
+  }
+
+  .desc p{
+    color:white;
+    padding: 10%;
+    max-width: 80%;
+    font-size: 20px;
+  }
+}

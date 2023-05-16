@@ -1,0 +1,169 @@
+body{
+    /*background-color: black;*/
+    font-family: 'Rajdhani', sans-serif;
+    background-image: url("../imgs/starsbackground.gif");
+    background-size: auto;
+    background-repeat: repeat;
+    margin:0;
+    padding:0;
+    cursor: url('../imgs/ballcursor3.png'), auto !important;
+}
+
+a {
+  cursor: url('../imgs/ballcursor3.png') 10 10, auto !important;
+}
+
+.item1 { grid-area: room; }
+.item2 { 
+    grid-area: items;
+    padding-bottom: 5%; 
+}
+.item3 { grid-area: face; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'room room face'
+    'items items bio';
+  gap: 10px;
+  /*background-color: #2196F3;*/
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+/*IMG sizes*/
+.room{
+    width: 85%;
+    height: auto;
+}
+
+.face{
+    width: 66%;
+    height: auto; 
+}
+
+
+
+.item2{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.frame {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .objects {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .drag {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 25%;
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav img {
+    max-width: 120px;
+    min-width: 120px;
+    height:auto;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+  }
+
+  .nav{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding-bottom: 20px; /* Add desired padding at the bottom */
+  }
+
+  #navAbout{
+    filter: invert(1);
+  }
+
+  .item4 {
+    grid-area: bio;
+    position: relative;
+    padding-bottom: 5%; 
+  }
+  
+  .description {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .item4 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-weight: 500;
+    text-align: left;
+    font-size: 60%;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #bigasslamp{
+    width:35%;
+  }
+
+  #bigasscat{
+    width:35%;
+  }
+
+
+
+  /*MEEDIA QUERY YIPEE*/
+  @media only screen and (max-width: 600px) {
+
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'room'
+        'items'
+        'face'
+        'bio';
+      gap: 10px;
+      /*background-color: #2196F3;*/
+    }
+
+    .item4{
+      padding-top: 55%;
+    }
+  }

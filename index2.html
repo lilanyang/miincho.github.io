@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minkyung :-)</title>
+    <link rel="stylesheet" href="css/index2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
+</head>
+<body>
+    
+    <div class="nav">
+        <img id="navAbout" src="imgs/aboutmetab.png">
+        <a href="lab.html"> <img id="navLab" src="imgs/labtab.png"> </a>
+        <a href="projects2.html"> <img id="navProjects" src="imgs/projectstab.png"> </a>
+    </div>
+
+    <div class="grid-container">
+        <div class="item1">
+            <img class="room" src="imgs/room.png">
+        </div>
+
+        <div class="item2">
+
+            <div class="drag">
+                <img class="frame" src="imgs/itemframe.png">
+                <img class="objects" src="imgs/plant.png">
+            </div>
+
+            <div class="drag">
+                <img class="frame" src="imgs/itemframe.png">
+                <img class="objects" src="imgs/mallard.png">
+            </div>
+
+            <div class="drag">
+                <img class="frame" src="imgs/itemframe.png">
+                <img class="objects" id="bigasslamp" src="imgs/lamp.png">
+            </div>
+
+            <div class="drag">
+                <img class="frame" src="imgs/itemframe.png">
+                <img class="objects" src="imgs/dresser.png">
+            </div>
+
+            <div class="drag">
+                <img class="frame" src="imgs/itemframe.png">
+                <img class="objects" id="bigasscat" src="imgs/gato.png">
+            </div>
+
+        </div>
+
+        <div class="item3">
+            <img class="face" src="imgs/face.png">
+        </div>  
+
+        <div class="item4">
+            <img class="description" src="imgs/descriptionframe.png">
+            <p>
+                Hi, my name is Minkyung 
+                I’m from Korea but I’ve lived most of my life in Alabama. 
+
+                Some of my favorite things to do are spending money, lying, and making pixel art. 
+                Enjoy your time here!
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {$(".objects").draggable(); })
+    </script>
+
+</body>
+</html>

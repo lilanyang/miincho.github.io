@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects!!!</title>
+    <link rel="stylesheet" href="css/projects2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="nav">
+        <a href="index2.html"><img id="navAbout" src="imgs/aboutmetab.png"></a>
+        <a href="lab.html"><img id="navLab" src="imgs/labtab.png"></a>
+        <img id="navProjects" src="imgs/projectstab.png">
+    </div>
+    
+<a href="../miincho.github.io/studio/Project1/index.html">
+<div class="bruh">
+    <div class="project1">
+        <div class="thumbnails">
+            <img class="screenshots" src="imgs/1TN.png">
+            <video src="imgs/proj1VID.mp4" alt="Video" class="video" loop muted playsinline></video>
+            <img class="IMGframe" src="imgs/thumbnailFrame.png">
+        </div>
+
+
+    </div>
+
+    <div class="projectone">
+        <div class="desc">
+            <img class="longframe" src="imgs/longdescriptionFrame.png">
+            <p>
+                <span>On Beginnings</span> <br><br>
+                Translating a story into an interactive experience using only typography. Short story "On Beginnings" by Mary Reufle. 
+            </p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="../miincho.github.io/studio/Project2/about.html">
+<div class="bruh">
+    <div class="project1">
+        <div class="thumbnails">
+            <img class="screenshots" src="imgs/2TN.png">
+            <video src="imgs/proj2VID.mp4" alt="Video" class="video" loop muted playsinline></video>
+            <img class="IMGframe" src="imgs/thumbnailFrame.png">
+        </div>
+
+
+    </div>
+
+    <div class="projectone">
+        <div class="desc">
+            <img class="longframe" src="imgs/longdescriptionFrame.png">
+            <p>
+                <span>Dating Simulator</span> <br><br>
+                Collection of data from 4 fake dating profiles. Experiment to see how strangers treat you differently based on physical appearance.
+            </p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="../miincho.github.io/studio/Project3/about.html">
+<div class="bruh">
+    <div class="project1">
+        <div class="thumbnails">
+            <img class="screenshots" src="imgs/3TN.png">
+            <video src="imgs/proj3VID.mp4" alt="Video" class="video" loop muted playsinline></video>
+            <img class="IMGframe" src="imgs/thumbnailFrame.png">
+        </div>
+
+
+    </div>
+
+    <div class="projectone">
+        <div class="desc">
+            <img class="longframe" src="imgs/longdescriptionFrame.png">
+            <p>
+                <span>The SAT</span> <br><br>
+                Experience the inequalities of standardized testing by comparing your scores to those of the high schools in NYC.
+            </p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+
+
+
+
+
+<script>
+    const imageContainers = document.querySelectorAll('.thumbnails');
+
+    imageContainers.forEach(container => {
+    const image = container.querySelector('.screenshots');
+    const video = container.querySelector('.video');
+
+    container.addEventListener('mouseover', () => {
+        image.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    });
+
+    container.addEventListener('mouseout', () => {
+        image.style.display = 'block';
+        video.style.display = 'none';
+        video.pause();
+    });
+    });
+</script>
+
+    <!--
+    <div class="project">
+        <div class="thumbnails">
+            <img class="screenshots" src="imgs/2TN.png">
+            <img class="IMGframe" src="imgs/thumbnailFrame.png">
+        </div>
+
+        <div class="desc">
+            <img class="longframe" src="imgs/longdescriptionFrame.png">
+            <p>
+                Dating Simulator <br>
+                Collection of data from 4 fake dating profiles.
+            </p>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="thumbnails">
+            <img class="screenshots" src="imgs/3TN.png">
+            <img class="IMGframe" src="imgs/thumbnailFrame.png">
+        </div>
+
+        <div class="desc">
+            <img class="longframe" src="imgs/longdescriptionFrame.png">
+            <p>
+                The SAT <br>
+                Try to beat the SAT scores of the schools of NYC. 
+            </p>
+        </div>
+    </div>
+-->
+
+</body>
+</html>
